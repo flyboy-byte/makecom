@@ -30,6 +30,9 @@ written to help decide whether this is worth pursuing and how to start.
 | [`docs/documentation-guide.md`](./docs/documentation-guide.md) | Meta | Explains the tiers below, who each doc is for, and how they fit together |
 | [`docs/business-idea.md`](./docs/business-idea.md) | High-level | The pitch: what it is, who it's for, why now, what makes it different |
 | [`docs/feasibility.md`](./docs/feasibility.md) | High-level | Market demand, competition, unit economics, time-to-first-dollar |
+| [`docs/architecture.md`](./docs/architecture.md) | Low-level | The vertical-agnostic technical reference architecture — what's fixed vs. pluggable per client |
+| [`docs/vertical-playbook.md`](./docs/vertical-playbook.md) | Mixed | Repeatable process for screening a new vertical and onboarding a new client |
+| [`docs/vertical-scenarios.md`](./docs/vertical-scenarios.md) | High-level | Three hypothetical verticals stress-testing whether the qualification-test framing actually holds |
 | [`docs/infrastructure.md`](./docs/infrastructure.md) | Low-level | What you actually need to stand this up — accounts, tools, stack |
 | [`docs/risks.md`](./docs/risks.md) | Mixed | Legal, technical, market, and operational risks with mitigations |
 | [`docs/entrepreneur-notes.md`](./docs/entrepreneur-notes.md) | High-level | Positioning, pricing rationale, go-to-market, open questions, next steps |

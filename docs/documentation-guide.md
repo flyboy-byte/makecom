@@ -24,6 +24,7 @@ questions plainly, doesn't require Make.com/webhook/API literacy to follow.
 | [`business-idea.md`](./business-idea.md) | The pitch — what it is, who it's for, why now |
 | [`feasibility.md`](./feasibility.md) | Is this worth pursuing — demand, cost, validation plan |
 | [`entrepreneur-notes.md`](./entrepreneur-notes.md) | Live scratchpad of open decisions |
+| [`vertical-scenarios.md`](./vertical-scenarios.md) | Stress-tests whether the qualification-test framing holds outside HVAC/auto-repair |
 | [`risks.md`](./risks.md) *(legal/market sections)* | What could kill this and why |
 
 ### Low-level — the build layer
@@ -37,8 +38,15 @@ config flags, response-time numbers.
 | Doc | What it's for |
 | --- | --- |
 | [`../make.com review.md`](../make.com%20review.md) | The technical/operating spine — architecture, SLA tiers, SOW template, worked examples |
+| [`architecture.md`](./architecture.md) | The vertical-agnostic reference architecture — what's fixed vs. pluggable per client |
 | [`infrastructure.md`](./infrastructure.md) | What accounts/tools/stack to actually set up |
 | [`risks.md`](./risks.md) *(technical/operational sections)* | What breaks in production and how it's guarded against |
+
+### Mixed — process docs that bridge both altitudes
+
+| Doc | What it's for |
+| --- | --- |
+| [`vertical-playbook.md`](./vertical-playbook.md) | Screening a new vertical (high-level judgment call) and onboarding a new client (low-level structured intake) in one repeatable process |
 
 ## How the tiers relate
 

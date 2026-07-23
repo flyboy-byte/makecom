@@ -18,13 +18,23 @@ a test, a signed agreement), not by more writing.
 `docs/documentation-guide.md` explains the doc tiering in full; the short version:
 
 - **High-level** (`docs/business-idea.md`, `docs/feasibility.md`,
-  `docs/entrepreneur-notes.md`, and the legal/market sections of `docs/risks.md`) answers
-  "should this exist" — written for the decision-maker, assumes no technical background.
-- **Low-level** (`docs/infrastructure.md`, the technical/operational sections of
-  `docs/risks.md`) answers "how does this get built" — assumes the high-level case is
-  already accepted.
+  `docs/entrepreneur-notes.md`, `docs/vertical-scenarios.md`, and the legal/market
+  sections of `docs/risks.md`) answers "should this exist" — written for the
+  decision-maker, assumes no technical background.
+- **Low-level** (`docs/architecture.md`, `docs/infrastructure.md`, the
+  technical/operational sections of `docs/risks.md`) answers "how does this get built" —
+  assumes the high-level case is already accepted.
+- **Mixed** (`docs/vertical-playbook.md`) bridges both — a repeatable process that spans
+  a high-level screening judgment call and a low-level structured intake.
 - **Meta** (`FRAMEWORK.md`, `docs/documentation-guide.md`, `docs/research-handoff.md`)
   describes the packet itself.
+
+The target market is defined by the source manual's 3-Trait Qualification Test (volume,
+unstructured input, structured destination — `make.com review.md` §1.3), not by a fixed
+industry. HVAC/auto-repair are this project's researched case study, not the definition
+of who it's for — see `docs/business-idea.md` and `docs/vertical-scenarios.md`. Don't
+reintroduce vertical-specific language into vertical-agnostic docs (`architecture.md`,
+`vertical-playbook.md`) without a good reason.
 
 `make.com review.md` (with matching PDF) is the original source manual this packet was
 built from — treat it as the technical spine; the `docs/` files are the strategic layer

@@ -58,6 +58,22 @@ in principle, what could kill it, what it costs to build.
 - [x] `docs/entrepreneur-notes.md` — open decisions log
 - [x] `docs/documentation-guide.md` + `docs/research-handoff.md` — the packet knows how
       to be read and how to close its own gaps
+- [x] **Added 2026-07-23 — architecture and vertical-agnostic scaffolding**, prompted by
+      the observation that the vertical-agnostic reframe (see above) was still abstract
+      without a technical and process backbone to match it:
+      - `docs/architecture.md` — the eight-stage reference architecture, splitting what's
+        fixed (the actual technical moat) from what's pluggable per client, grounded
+        against the three existing worked examples in `make.com review.md` §7
+      - `docs/vertical-playbook.md` — a two-layer screening/onboarding process: cheap
+        vertical-level checks before committing research time, then the (already
+        vertical-agnostic) per-client discovery process already in the source manual
+      - `docs/vertical-scenarios.md` — three hypothetical verticals (dental/medical
+        front desk, small law firm intake, e-commerce returns) run through the
+        architecture and screening checks as a reasoning stress test — explicitly
+        unresearched, meant to test whether the abstraction holds, not to identify a
+        real second market. Found the architecture holds up reasonably well, with one
+        honest exception (the law-firm scenario suggests an unmodeled ninth stage for
+        some verticals) — see that doc for the full reasoning.
 
 **Gate to Phase 2:** none blocking — Phase 1 is a documentation exercise and is
 essentially complete. What's *not* done is anything that required leaving this directory.
@@ -178,6 +194,16 @@ are now this project's researched case study, not the definition of the target �
 `docs/business-idea.md`. This reopens a real decision: which vertical to actually
 validate in first, which should be driven by where real access/domain knowledge exists,
 not by defaulting to whatever's already been researched.
+
+**Same day, follow-on:** that reframe was abstract until it had a technical and process
+backbone to match — added `docs/architecture.md` (the eight-stage reference architecture,
+fixed vs. pluggable per client), `docs/vertical-playbook.md` (a two-layer screening and
+onboarding process), and `docs/vertical-scenarios.md` (three hypothetical verticals
+stress-testing whether the architecture actually generalizes). The stress test held up
+reasonably well but wasn't a rubber stamp — it surfaced one honest gap (a possible
+missing ninth stage for compliance-heavy verticals like legal intake). None of this
+changes the actual next action below; it makes the "any qualifying business" claim
+concrete enough to act on once a real vertical is chosen.
 
 Nothing left in Phase 2 can be resolved from inside this directory. The single
 highest-leverage next action: pick a first vertical based on real access, then talk to
