@@ -66,8 +66,19 @@ Update this file as answers come in from real client conversations.
 
 ## Go-to-market — open questions
 
-- Who is the first prospect, specifically? Cold outreach to trade businesses vs. warm
-  network vs. a specific local geography — not addressed in the source material at all.
+- **Which vertical to actually validate in first — reopened 2026-07-23.** The packet no
+  longer defaults to HVAC/auto-repair by definition (see `docs/business-idea.md`), which
+  means this question is now genuinely open rather than pre-answered by the source
+  manual. The right way to pick: not "which industry sounds biggest," but **where do you
+  (or someone you can actually reach) have real domain knowledge or a real relationship**
+  — because the qualification test only screens for workflow *shape*; it doesn't supply
+  the operational detail needed to actually design a pipeline. That detail has to come
+  from somewhere real. Candidates worth weighing: HVAC/auto-repair (already researched
+  in depth here, but no personal access confirmed either way), or any other business
+  clearing the 3-Trait Test where you have an actual in.
+- Who is the first prospect, specifically, within whichever vertical gets picked? Cold
+  outreach vs. warm network vs. a specific local geography — not addressed in the source
+  material at all.
 - Is the "mandatory video capture of 5 recordings" intake step (`review.md` §1.2) too high
   friction for an unproven agency with no track record? It's a reasonable qualification
   filter once there's reputation/referrals to draw on, but may be an early barrier to the
@@ -75,12 +86,15 @@ Update this file as answers come in from real client conversations.
   to be relaxed for client #1.
 - What's the actual channel for finding businesses that clear the 3-Trait Qualification
   Test (§1.3)? This test is good for filtering inbound leads but says nothing about how to
-  generate them in the first place.
+  generate them in the first place, in any vertical.
 
 ## Sequencing — a reasonable first-90-days plan (not in source material, inferred)
 
-1. Talk to 5–10 real trade-business owners/ops people about their actual pain points
-   before building anything (validates or kills the market assumption cheaply).
+1. **Pick a first vertical based on real access** (see "Which vertical to actually
+   validate in first" above), then talk to 5–10 real owners/ops people in that vertical
+   about their actual pain points before building anything (validates or kills the
+   market assumption cheaply). This step didn't used to be a real decision — the packet
+   defaulted to HVAC/auto-repair — but it is now.
 2. Pick the cheapest-to-build worked pattern (likely missed-call SMS resuscitation — no
    PDF/vision parsing, minimal integration surface) and build one working version as a
    demo/proof, even without a paying client yet.
@@ -105,7 +119,7 @@ verification, idempotency, HITL) rather than generic "maintenance" — that's th
 between this packet's engineering rigor and what the cheaper no-retainer competitors
 appear to offer.
 
-## Market-size denominators (context only, not a qualification-rate answer)
+## Market-size denominators (HVAC/auto-repair case study — context only, not a qualification-rate answer)
 
 Both deep-research passes found real establishment-count data, useful as candidate-pool
 context even though the actual qualification rate (§Q6) still requires primary research:

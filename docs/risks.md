@@ -134,9 +134,14 @@
 ## Market / business risk
 
 - **Unvalidated demand.** Covered in depth in `feasibility.md` — the biggest single risk
-  to the business is that the target vertical won't pay implementation + mandatory
-  retainer pricing at the volumes assumed, or that qualified prospects (≥10 runs/week,
-  unstructured input, structured destination) are rarer than expected.
+  to the business is that no target business (in whichever vertical actually gets
+  chosen) will pay implementation + retainer pricing at the volumes assumed, or that
+  qualified prospects (≥10 runs/week, unstructured input, structured destination) are
+  rarer than expected. **Updated 2026-07-23:** this risk got slightly harder to reason
+  about, not easier — the target is now defined by a qualification test rather than a
+  fixed vertical (see `docs/business-idea.md`), which means the existing HVAC/auto-repair
+  demand research is a case study, not a guarantee the same demand exists wherever the
+  first real vertical ends up being.
 - **Retainer framed as mandatory.** Positioning the ongoing SLA as non-optional is a
   double-edged design choice: it protects margin and system reliability, but it's also a
   harder sell than an optional add-on, and a client who balks at "mandatory" may walk from
@@ -152,9 +157,15 @@
   Make's side are a single point of failure for the whole business model — not addressed
   anywhere in the source manual.
 - **Competitive commoditization.** No-code/AI automation agencies are a fast-growing,
-  increasingly crowded space. The differentiation here (engineering rigor, narrow vertical
-  focus) is real but not defensible via any moat besides execution quality and reputation
-  — a competitor can copy this exact playbook after reading a similar manual.
+  increasingly crowded space. The differentiation here (engineering rigor, narrow
+  workflow-shape qualification) is real but not defensible via any moat besides execution
+  quality and reputation — a competitor can copy this exact playbook after reading a
+  similar manual. **Updated 2026-07-23:** narrowing by qualification test rather than by
+  named vertical is what keeps this from sliding into "we automate anything with AI"
+  (the actually commoditized version) — but it only works as a real filter if it's
+  applied with discipline against real prospects, not treated as broad license to sell to
+  anyone. Going after "any business" without genuinely applying the 3-Trait Test would
+  recreate the exact commoditization risk this framing was meant to avoid.
 
 ## Operational risk
 

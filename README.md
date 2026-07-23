@@ -5,9 +5,14 @@ actually in and what has to happen next. This README is the doc index; `FRAMEWOR
 the status tracker and the thing worth re-opening after time away.
 
 This directory is a staged expansion of a potential business: a **Make.com-based
-"Workflow Repair Agency"** that builds deterministic, fault-tolerant automation pipelines
-for local trade and service businesses (HVAC, automotive, similar), and sells ongoing
-maintenance retainers on top.
+"Workflow Repair" service** that builds deterministic, fault-tolerant automation
+pipelines for any business whose workflows pass a specific qualification test (high
+volume, unstructured input, structured destination — see `docs/business-idea.md`), with
+an ongoing maintenance retainer offered on top. **Updated 2026-07-23:** originally scoped
+narrowly to HVAC and auto-repair trade businesses (the source manual's example
+verticals); the target is now defined by the qualification test rather than by industry.
+HVAC/auto-repair remain this project's researched case study — see `docs/feasibility.md`
+— but are an example of the target, not its definition.
 
 The original technical/operating manual — `make.com review.md` (and the matching PDF) —
 is the source material. It already defines the operating model in detail: client

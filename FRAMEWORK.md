@@ -14,6 +14,14 @@ has a concrete exit condition, and you don't move to the next phase by writing m
 you move by doing the thing the gate actually requires (a conversation, a test, a signed
 contract). Docs support the phases; they don't substitute for them.
 
+**This is also, honestly, a hobby project and a way to see what this kind of
+Claude-driven process can actually do** — not something on a hard timeline toward
+launching a real agency. That doesn't change what the gates *require* (if this ever
+became a real business, the same real-world steps would still be necessary), but it does
+change the tone: there's no pressure to rush toward Phase 4, and it's fine for the next
+move to be "build something interesting" rather than "close the next commercial
+blocker." Both are legitimate uses of this packet.
+
 Update the checkboxes below as things actually happen. This file is the honest answer to
 "where are we" at any point in the future.
 
@@ -22,8 +30,10 @@ Update the checkboxes below as things actually happen. This file is the honest a
 ```
 Phase 0          Phase 1              Phase 2            Phase 3         Phase 4            Phase 5
 Capture    ──►    Strategic Framing ──► Validation  ──►   Build     ──►  First Client  ──►  Formalize & Scale
-(done)            (mostly done)         (not started)     (blocked      (blocked on 3)      (blocked on 4)
-                                                            on 2)
+(done)            (done)                (research          (blocked      (blocked on 3)      (blocked on 4)
+                                          closed out,        on 2)
+                                          primary research
+                                          still open)
 ```
 
 ### Phase 0 — Capture ✅ done
@@ -36,7 +46,7 @@ The raw source material exists and has been read in full.
 
 **Gate to Phase 1:** none — automatic once the source material exists.
 
-### Phase 1 — Strategic Framing ✅ mostly done
+### Phase 1 — Strategic Framing ✅ done
 
 Turn the raw manual into a decision-ready packet: what it is, whether it's worth pursuing
 in principle, what could kill it, what it costs to build.
@@ -90,10 +100,24 @@ pattern before it's sold to anyone.
 - [ ] **New action item from research:** decide whether to adopt the two-path pricing
       recommendation (one-time build-and-own + incentivized retainer) before or after
       the first real prospect conversations — see `docs/entrepreneur-notes.md`.
+- [x] **Reworked 2026-07-23 — decoupled the target market from HVAC/auto-repair.** The
+      packet originally inherited its target vertical directly from the source manual's
+      worked examples. On reflection, the actual targeting mechanism should be the
+      source manual's own **3-Trait Qualification Test** (volume, unstructured input,
+      structured destination — `make.com review.md` §1.3), which is industry-agnostic,
+      not a fixed vertical list. `docs/business-idea.md`, `README.md`,
+      `docs/feasibility.md`, `docs/entrepreneur-notes.md`, and `docs/risks.md` were all
+      updated accordingly. HVAC/auto-repair remain this project's researched case study
+      — genuinely useful if that ends up being the first real vertical — but they're no
+      longer treated as the definition of the target.
+- [ ] **New open decision from that rework:** which vertical to actually validate in
+      first is now genuinely open, not pre-answered. Should be decided by where real
+      access/domain knowledge exists, not by which industry sounds biggest — see
+      `docs/entrepreneur-notes.md` §"Which vertical to actually validate in first."
 
 **Gate to Phase 3:** at least one real conversation confirming the pain is real *and*
-worth paying for, or a clear signal it's not (in which case: revisit `business-idea.md`'s
-vertical choice before building anything, not after).
+worth paying for, or a clear signal it's not (in which case: revisit which vertical to
+target, per the open decision above, before building anything).
 
 ### Phase 3 — Build ⬜ blocked on Phase 2
 
@@ -145,13 +169,24 @@ niche, and most don't require a mandatory retainer — this is now a well-corrob
 market fact, not a hypothesis, and directly threatens this packet's pricing model. Both
 passes converge on the same fix: offer a one-time build-and-own path at a premium
 alongside an incentivized retainer, rather than presenting the retainer as mandatory
-(see `docs/feasibility.md`, `docs/entrepreneur-notes.md`). Nothing left in Phase 2 can
-be resolved from inside this directory. The single highest-leverage next action: talk to
-real trade-business owners, specifically testing whether they'll pay an ongoing retainer
-at all given named competitors don't require one, and whether the two-path pricing
-recommendation lands. The missed-call SMS workflow pattern also needs an actual lawyer
-before it's ever sold to a client — that's the other real-world action item research
-alone can't close.
+(see `docs/feasibility.md`, `docs/entrepreneur-notes.md`).
+
+**Also reworked 2026-07-23:** the target market is no longer defined by HVAC/auto-repair
+specifically — it's defined by the source manual's 3-Trait Qualification Test (volume,
+unstructured input, structured destination), which is industry-agnostic. HVAC/auto-repair
+are now this project's researched case study, not the definition of the target — see
+`docs/business-idea.md`. This reopens a real decision: which vertical to actually
+validate in first, which should be driven by where real access/domain knowledge exists,
+not by defaulting to whatever's already been researched.
+
+Nothing left in Phase 2 can be resolved from inside this directory. The single
+highest-leverage next action: pick a first vertical based on real access, then talk to
+real business owners in it — testing whether the pain is real, whether they'll pay an
+ongoing retainer at all given named competitors (in the HVAC/auto-repair case study)
+don't require one, and whether the two-path pricing recommendation lands. The
+missed-call SMS workflow pattern also needs an actual lawyer before it's ever sold to a
+client, regardless of vertical — that's the other real-world action item research alone
+can't close.
 
 ## On the "reusable framework" idea
 

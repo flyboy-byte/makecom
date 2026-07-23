@@ -9,6 +9,17 @@ This is Phase 1 reasoning — none of the numbers below are validated with real 
 conversations or a built prototype. Treat every figure as a placeholder to test, not a
 forecast.
 
+**Framing note, added 2026-07-23:** this doc's demand analysis and all the research below
+it are specific to HVAC and auto-repair, because that's the source manual's example
+vertical and where the actual research (competitor pricing, software spend, market size)
+got done. Per `docs/business-idea.md`, the target market is now defined by a
+qualification test (volume, unstructured input, structured destination), not by
+industry — HVAC/auto-repair are this project's case study, a plausible first vertical to
+validate in, not the definition of who the product is for. If a different vertical ends
+up being the actual first target, most of the *reasoning* here (how to think about
+demand, competitors, pricing) still transfers, but the specific numbers below (software
+costs, named competitors, shop counts) do not.
+
 ## Demand signal (inferred, unverified)
 
 - Trade businesses (HVAC, auto repair, similar field service) are a large, fragmented
@@ -50,9 +61,13 @@ forecast.
 
 In rough priority order:
 
-1. **Will a real trade business pay for this?** Talk to 5–10 owners/ops managers in the
-   target verticals about their actual pain (missed calls, invoice entry, quote intake)
-   before building anything. This is cheaper than building a demo scenario first.
+1. **Will a real business pay for this?** Talk to 5–10 owners/ops people about their
+   actual pain (missed calls, invoice entry, quote intake, or whatever the equivalent
+   is in their workflow) before building anything. This is cheaper than building a demo
+   scenario first. **Which businesses to talk to should be driven by where you actually
+   have access or domain knowledge**, not by defaulting to HVAC/auto-repair just because
+   that's what's been researched — see `docs/entrepreneur-notes.md` for this as an open
+   decision.
 2. **Can the implementation actually be delivered profitably at a plausible one-time
    fee?** The SOW template leaves the fee blank (`review.md` §6) — build a real time
    estimate for one of the three worked examples (§7.1–7.3) and back into a fee that
@@ -123,6 +138,8 @@ parsing involved), and using that as a reference case before selling the second 
 
 The technical model is coherent and the engineering discipline described is a real
 differentiator against sloppy competitors. The unresolved question is entirely commercial:
-whether real trade businesses at the targeted volume will pay implementation + mandatory
-retainer pricing, and how many of them exist and are reachable. That's a sales/market
-question, not an engineering one — resolve it before investing further build time.
+whether real businesses — in whichever vertical actually gets chosen, HVAC/auto-repair
+or otherwise — at the targeted volume will pay implementation-plus-retainer pricing (now
+correctly framed as recommended, not mandatory — see `docs/business-idea.md`), and how
+many of them exist and are reachable. That's a sales/market question, not an engineering
+one — resolve it before investing further build time.
