@@ -67,23 +67,43 @@ BOX_CHARS = set("│─┌┐└┘├┤┬┴┼▼►◄▲")
 # ---------------------------------------------------------------- discovery
 
 
+# Hand-written where the filename doesn't make a good nav label.
+RESEARCH_TITLES = {
+    "2026-07-23-full-deep-research-opus": "Full research · Opus",
+    "2026-07-23-full-deep-research-chatgpt": "Full research · ChatGPT",
+    "2026-07-23-competitor-pricing-claude-websearch": "Competitor pricing · fast",
+    "2026-07-23-trade-software-baseline-cost-claude-websearch": "Software baseline · fast",
+    "2026-07-23-tcpa-sms-compliance-claude-websearch": "TCPA & SMS law · fast",
+    "2026-07-23-llm-provider-data-retention-claude-websearch": "LLM retention · fast",
+    "2026-07-23-automation-build-cost-benchmark-claude-websearch": "Build cost · fast",
+}
+
+ACRONYMS = {"llm": "LLM", "tcpa": "TCPA", "sms": "SMS", "zdr": "ZDR", "api": "API",
+            "crm": "CRM", "erp": "ERP", "sow": "SOW", "sla": "SLA"}
+
+
+def _titlecase(text: str) -> str:
+    return " ".join(ACRONYMS.get(w.lower(), w.capitalize()) for w in text.split())
+
+
 def research_pages() -> list[tuple[str, str, str, str]]:
     """Research files, newest first, as nav entries."""
     out = []
     for path in sorted((ROOT / "research").glob("*.md"), reverse=True):
         if path.name.lower() == "readme.md":
-            title = "About the research folder"
+            title = "About this folder"
             slug = "research-index"
         else:
             slug = "research-" + path.stem.lower()
-            stem = path.stem
-            m = re.match(r"(\d{4}-\d{2}-\d{2})-(.+?)-(chatgpt|opus|claude-websearch)$", stem)
-            if m:
-                topic = m.group(2).replace("-", " ")
-                engine = {"chatgpt": "ChatGPT", "opus": "Opus", "claude-websearch": "quick search"}[m.group(3)]
-                title = f"{topic.title()} ({engine})"
-            else:
-                title = stem.replace("-", " ").title()
+            title = RESEARCH_TITLES.get(path.stem)
+            if not title:
+                m = re.match(r"\d{4}-\d{2}-\d{2}-(.+?)-(chatgpt|opus|claude-websearch)$", path.stem)
+                if m:
+                    engine = {"chatgpt": "ChatGPT", "opus": "Opus",
+                              "claude-websearch": "fast"}[m.group(2)]
+                    title = f"{_titlecase(m.group(1).replace('-', ' '))} · {engine}"
+                else:
+                    title = _titlecase(path.stem.replace("-", " "))
         out.append((f"research/{path.name}", slug, title, "Evidence"))
     return out
 
@@ -98,6 +118,14 @@ LINK_MAP["readme.md"] = "index"
 
 
 # ------------------------------------------------------------- preprocessing
+
+
+def strip_latex(text: str) -> str:
+    """The source manual carries a little stray LaTeX; render it as plain text."""
+    text = re.sub(r"\$\\+ge\s*(\d+)\$", r"≥ \1", text)
+    text = re.sub(r"\$\\+le\s*(\d+)\$", r"≤ \1", text)
+    text = re.sub(r"\$([\d,]+)/\\+text\{min\}\$", r"\1/min", text)
+    return text
 
 
 def wrap_ascii_diagrams(text: str) -> str:
@@ -122,8 +150,11 @@ def wrap_ascii_diagrams(text: str) -> str:
             i += 1
             continue
 
-        # start of a diagram run: consume until two consecutive non-diagram lines
+        # Absorb indented lines immediately above the run — they're the diagram's
+        # title/root node. Left behind they become their own indented code block.
         run: list[str] = []
+        while out and out[-1].startswith("  ") and out[-1].strip():
+            run.insert(0, out.pop())
         blanks = 0
         while i < len(lines):
             cur = lines[i]
@@ -438,6 +469,7 @@ def phase_rail_html() -> str:
 
 def convert(src_rel: str) -> tuple[str, dict[str, str], str]:
     raw = (ROOT / src_rel).read_text(encoding="utf-8")
+    raw = strip_latex(raw)
     raw = wrap_ascii_diagrams(raw)
     raw, fields = extract_tier_block(raw)
 

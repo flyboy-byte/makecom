@@ -231,12 +231,17 @@ button:focus-visible {
   color: var(--accent);
 }
 
+/* Wider than a reading column so tables, diagrams and code get room; running
+   prose is held to a comfortable measure by the max-width on .prose p / li. */
 main {
   padding: 3.5rem 3rem 6rem;
-  max-width: 78ch;
+  max-width: 880px;
 }
+/* The landing page carries structural blocks (rail, ledger, provenance) that
+   need more room than a reading column; prose inside it stays narrow via the
+   max-width on .prose p / li. */
 main.wide {
-  max-width: 88ch;
+  max-width: 1060px;
 }
 
 /* --------------------------------------------------------------- doc head */
@@ -486,17 +491,28 @@ main.wide {
   font-weight: 600;
   margin: 0 0 0.9rem;
 }
+/* Six phases: an explicit 3x2 keeps the grid full — auto-fit left a dead cell. */
 .rail {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1px;
   background: var(--rule);
   border: 1px solid var(--rule);
   border-radius: 4px;
   overflow: hidden;
+}
+@media (max-width: 780px) {
+  .rail {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 460px) {
+  .rail {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 .phase {
   background: var(--raised);
