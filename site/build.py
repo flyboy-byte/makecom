@@ -507,9 +507,12 @@ def build() -> None:
             page_shell(title=nav_title, slug=slug, body=article), encoding="utf-8"
         )
 
-    # landing page
-    _heading, _fields, readme_body = convert("README.md")
-    readme_body = re.sub(r"<h2[^>]*>Contents</h2>.*?</table>", "", readme_body, flags=re.DOTALL)
+    # Landing page. Its prose lives in site/overview.md rather than README.md so the
+    # repo's front door can stay short without stripping the site.
+    _heading, _fields, readme_body = convert("site/overview.md")
+    readme_body = re.sub(
+        r"<p><em>Source for the landing page.*?</em></p>", "", readme_body, flags=re.DOTALL
+    )
     hero = f"""<header class="hero">
   <p class="eyebrow">Idea → business, in public</p>
   <h1>{SITE_TITLE}</h1>
