@@ -24,28 +24,45 @@ Update this file as answers come in from real client conversations.
 
 - The SLA tiers ($499 / $1,250 / $2,950+) are plausible for the value described (patch
   windows, audits, credit pool management) but were not benchmarked against anything in
-  the source material. **Resolved 2026-07-23** (real ChatGPT deep-research pass, see
-  `research/2026-07-23-full-deep-research-chatgpt.md`, supersedes the earlier quick-search
-  first pass): against mainstream HVAC/auto-repair CRM-dispatch software ($200–$700/mo),
-  the retainer isn't priced in an alien range. But against the **closer substitute** —
-  at least 9 real, currently-active competitors selling automation into this exact niche
-  (Never Miss Work, Gabe Works, CallbackPro, AutoShop SMS AI, Automation Warrior,
-  TradeWire, Pigeon AI, ContractorOps, CloseLoop) — most price one-time, cancel-anytime,
-  or hybrid, not mandatory-retainer. Never Miss Work specifically sells a **$497 one-time,
-  no-monthly, no-contract** package. This is now a **confirmed market fact, not a
-  hypothesis**: mandatory retainer is not the visible norm in this niche. The
-  highest-priority thing to test with a real prospect is no longer "is $499/mo
-  reasonable" but "will they pay ongoing at all when named competitors don't require it
-  — and if not, is there a fallback offer" (see below).
+  the source material. **Resolved via two independent deep-research passes, 2026-07-23**
+  (ChatGPT: `research/2026-07-23-full-deep-research-chatgpt.md`; Claude/Opus:
+  `research/2026-07-23-full-deep-research-opus.md`) — both supersede the earlier
+  quick-search first pass and, notably, **found entirely different named competitors from
+  each other** while reaching the same conclusion, which is stronger evidence than either
+  pass alone. ChatGPT found Never Miss Work, Gabe Works, CallbackPro, AutoShop SMS AI,
+  Automation Warrior, TradeWire, Pigeon AI, ContractorOps, CloseLoop. Opus independently
+  found QuickOutcomes, AutomateNexus, Dorcia Automations, GoHighLevel-based offers, US
+  Tech Automations, Leads4Build, Zachary Hoppaugh LLC, Evolv AI Agents. **Both agree**:
+  setup-fee-plus-retainer is the *dominant* pattern in this niche, but a credible minority
+  of real, published competitors (Never Miss Work at $497 one-time no-contract;
+  QuickOutcomes from $1,000 one-time "we don't charge monthly fees at all"; AutomateNexus
+  from $2,500 one-time "no subscriptions, no vendor lock-in") sell pure one-time builds
+  and market explicitly against retainer lock-in. **Verdict: "mandatory" is defensible as
+  common practice, not as universal practice** — treating it as an unavoidable
+  requirement is a real, sourced competitive liability, not treating it as impossible to
+  sell at all.
+- **Concrete strategic recommendation from both research passes (worth taking seriously,
+  not just testing):** drop the word "mandatory." Offer two paths — (a) a build-and-own
+  one-time option priced at a premium (**$5,000–$8,000+/pipeline**) that neutralizes the
+  no-lock-in objection outright, and (b) a strongly-incentivized ongoing plan where the
+  retainer buys concrete, visible things (credits, monitoring, patch-response SLA,
+  audits) rather than being sold as "maintenance exists." Keep the existing
+  $499/$1,250/$2,950 tiers, but stop presenting them as the only path to engagement.
+  *Threshold to reconsider this:* if real discovery calls show prospects consistently
+  accept a mandatory retainer without objection, tighten back toward required — but
+  default to assuming they won't until that's actually observed.
 - The one-time implementation fee is an open blank in the SOW template (`review.md` §6).
-  **Resolved 2026-07-23** (real deep-research pass, supersedes the earlier rougher
-  quick-search estimate): realistic fully-loaded price for one pipeline at this packet's
-  actual scope is **$4,000–$10,000 (experienced freelancer) to $7,000–$18,000 (small
-  agency)**, ~40–90 hours, practical budgeting midpoint **~$6,000–$9,000**, 2–4 weeks
-  elapsed — well above generic "simple Zapier automation" pricing ($149–$975 one-time),
-  which matches the added scope of discovery, formal testing, and the HITL/idempotency
-  architecture. Still worth confirming against a real time-tracked build (Phase 3 in
-  `FRAMEWORK.md`), but this is now a real benchmark, not a rough proxy.
+  **Resolved via both deep-research passes, 2026-07-23** — converge closely: ChatGPT
+  estimates $4,000–$10,000 (freelancer) to $7,000–$18,000 (small agency), midpoint
+  ~$6,000–$9,000; Opus estimates $3,000–$12,000+, midpoint $6,000–$10,000, and gives a
+  concrete recommendation: **set the fee at ≥$3,000, target $5,000–$8,000/pipeline.**
+  Both are well above generic "simple Zapier automation" pricing ($149–$975 one-time, or
+  even sub-$100 on gig platforms), which matches the added scope of discovery, formal
+  testing, and the HITL/idempotency architecture. Anchoring the implementation fee at
+  this level also reduces dependence on the contested retainer for margin — i.e., pricing
+  the one-time build correctly is itself a partial hedge against the mandatory-retainer
+  risk above. Still worth confirming against a real time-tracked build (Phase 3 in
+  `FRAMEWORK.md`), but this is now a well-corroborated benchmark, not a rough proxy.
 
 ## Go-to-market — open questions
 
@@ -73,19 +90,32 @@ Update this file as answers come in from real client conversations.
 5. Decide whether "mandatory retainer" framing survived contact with a real client, or
    needs softening.
 
-## New open question from research (2026-07-23, confirmed by deep-research pass)
+## New open question from research (2026-07-23, confirmed by two independent deep-research passes)
 
-Given multiple sourced competitors offer no-retainer or cancel-anytime pricing (see
-pricing rationale above and `research/2026-07-23-full-deep-research-chatgpt.md`), it's
+Given multiple sourced competitors (found independently by two different research
+engines — see pricing rationale above) offer no-retainer or cancel-anytime pricing, it's
 worth deciding in advance whether "mandatory retainer" is a hill to defend in a first
-sales conversation, or whether there's a fallback position (e.g., an optional retainer
-with a clearly worse SLA/no-retainer tier, rather than an all-or-nothing mandate) —
-better to have that fallback thought through before a prospect pushes back mid-conversation
-than to improvise one on the spot. The research also suggests a specific differentiation
-angle if the mandatory framing is kept: sell it as compliance-grade, formally tested,
-audited infrastructure (the 50-valid/10-malformed test suite, signature verification,
-idempotency, HITL) rather than generic "maintenance" — that's the gap between this
-packet's engineering rigor and what the cheaper no-retainer competitors appear to offer.
+sales conversation, or whether to lead with the two-path offer both research passes
+recommend (one-time build-and-own at a premium, vs. an incentivized ongoing retainer) —
+better to have that decided before a prospect pushes back mid-conversation than to
+improvise one on the spot. If the mandatory framing is kept for some segment, the
+research suggests a specific differentiation angle: sell it as compliance-grade,
+formally tested, audited infrastructure (the 50-valid/10-malformed test suite, signature
+verification, idempotency, HITL) rather than generic "maintenance" — that's the gap
+between this packet's engineering rigor and what the cheaper no-retainer competitors
+appear to offer.
+
+## Market-size denominators (context only, not a qualification-rate answer)
+
+Both deep-research passes found real establishment-count data, useful as candidate-pool
+context even though the actual qualification rate (§Q6) still requires primary research:
+IBISWorld puts HVAC ("Heating & Air-Conditioning Contractors," NAICS 23822a) at 120,461
+businesses as of 2026 (+1.7% from 2025), average ~5.2 employees/business, $159.4bn
+industry size. Auto-repair estimates vary by source/NAICS definition — roughly
+170,000–280,000 depending on definition (IBISWorld "over 280,000," BLS ~176,000+,
+Statista ~174,200, commercial POI databases ~253,000). Treat these as the denominator
+only — see `docs/feasibility.md` for why the qualification-rate multiplier still needs
+real conversations, not a public-data estimate.
 
 ## Things to explicitly decide before writing a real contract
 

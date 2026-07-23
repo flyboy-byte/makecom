@@ -56,31 +56,63 @@
   using them with a real client — this is the single highest-leverage risk-reduction step
   before signing anyone.
 - **TCPA exposure in the missed-call SMS resuscitation pattern specifically.**
-  **Updated (2026-07-23, real ChatGPT deep-research pass — informational only, not legal
-  advice, see `research/2026-07-23-full-deep-research-chatgpt.md`):** the worked example
-  in `review.md` §7.3 sends an automated first text to someone who just called but has no
-  prior account/relationship. This is genuinely unsettled, not a clean violation or a
-  clean exemption: federal rule (47 C.F.R. § 64.1200) requires prior express consent for
-  autodialed texts and prior express *written* consent specifically if the message counts
-  as telemarketing; case law (e.g. Latner v. Mount Sinai) supports consent extending to
-  messages "closely related" to why the number was given, which helps an immediate,
-  non-promotional, purely contextual first text — but no primary FCC ruling was found
-  creating a clean missed-call-specific safe harbor (the often-cited SoundBite ruling
-  covers a reply to the consumer's own *text*, not a voice call). Facebook v. Duguid
-  narrowed the autodialer definition in ways that may help simple caller-ID-triggered
-  systems, but McLaughlin v. McKesson and a July 2026 Seventh Circuit ruling keep this
-  area actively contested rather than settled. **Safer first-message pattern identified:**
-  contextual, non-promotional, identifies the business, includes opt-out language (e.g.
-  "Hi, this is [Business]. Sorry we missed your call. Reply with what you need and we'll
-  follow up. Reply STOP to opt out.") — avoid anything that reads as an offer/promotion
-  in that first message. **10DLC registration is required** for standard long-code SMS
-  (brand + campaign registration, sample messages, consent-flow description; toll-free
-  avoids 10DLC specifically but not consent/opt-out requirements). TCPA penalties run
-  $500–$1,500 per message, not per campaign, so exposure scales directly with volume —
-  meaningful given this pattern's entire pitch is volume. **Do not represent "they called
-  us first" as sufficient legal justification** for this pattern with a client — this
-  needs actual legal review before it's sold to anyone, and the finding above is meant as
-  the briefing document for that review, not a substitute for it.
+  **Updated 2026-07-23 via two independent deep-research passes — informational only,
+  not legal advice** (ChatGPT: `research/2026-07-23-full-deep-research-chatgpt.md`;
+  Claude/Opus: `research/2026-07-23-full-deep-research-opus.md`, which added sharper
+  case-law citations). The worked example in `review.md` §7.3 sends an automated first
+  text to someone who just called but has no prior account/relationship. **This is
+  genuinely unsettled law, not a clean violation or a clean exemption.** Neither the TCPA
+  nor its implementing regs contain an explicit "returning a missed call" exception (per
+  TCPA specialist Eric Troutman/Troutman Amin) — the regs require either prior express
+  invitation/permission or an established business relationship from a voluntary
+  two-way communication, and a "sterile" missed call with no voicemail doesn't cleanly
+  satisfy either. Federal rule (47 C.F.R. § 64.1200) requires prior express consent for
+  autodialed texts, and prior express *written* consent specifically if the message
+  counts as telemarketing.
+  **Case law trending favorable but unsettled:** *Butera v. Sugarhouse Real Estate
+  Group* (D. Utah, June 30, 2025) held a return contact made "in response to [the
+  consumer's] own call" was not "unsolicited" — placing a call without a voicemail "was
+  an invitation for a return call" (though the court flagged the opposite would apply if
+  the consumer had said they were on the DNC list). *Steidinger v. Blackstone Medical
+  Services* (7th Cir., July 14, 2026) held texts are NOT "telephone calls" under
+  §227(c)(5), eliminating the private DNC right of action for texts in the Seventh
+  Circuit (IL, IN, WI) — but this creates an **unresolved circuit split** with the Ninth
+  Circuit's *Howard v. RNC* (2026), and *Steidinger* does **not** immunize texts under
+  §227(b), the actual autodialer/written-consent provision that matters most here. The
+  often-cited SoundBite FCC safe harbor covers a reply to the consumer's own *text*, not
+  a voice call, so it isn't a clean fit either. *Facebook v. Duguid* narrowed the
+  autodialer definition in ways that may help simple caller-ID-triggered systems, but
+  *McLaughlin Chiropractic v. McKesson* (2025, district courts no longer bound to FCC
+  interpretations) keeps this area actively contested. Separately, the FCC's one-to-one
+  consent rule was vacated by the Eleventh Circuit in *Insurance Marketing Coalition v.
+  FCC* (Jan. 24, 2025) — bundled consent remains permissible, the lead-gen tightening
+  did not take effect. **Litigation volume is real and rising:** TCPA class actions rose
+  95.2% year-over-year in H1 2025 (1,052 vs. 539) per Troutman Amin/WebRecon — exposure
+  is material even where the merits favor the defendant, given how expensive TCPA
+  litigation is to fight regardless of outcome.
+  **Safer first-message pattern identified:** contextual, non-promotional, identifies
+  the business, includes opt-out language (e.g. "Hi, this is [Business]. Sorry we missed
+  your call. Reply with what you need and we'll follow up. Reply STOP to opt out.") —
+  avoid anything reading as an offer/promotion in that first message, and require
+  separate opt-in before any follow-up/marketing sequence. Quiet hours (8am–9pm
+  recipient local time) and state mini-TCPA laws (e.g. Florida's) apply independently of
+  the federal analysis and should be screened per client state.
+  **10DLC registration is mandatory**, not optional, for standard long-code SMS — since
+  February 2025 all major US carriers block unregistered A2P traffic outright with no
+  grace period (brand registration ~2–3 business days, then separate per-use-case
+  campaign registration ~3–7 business days; toll-free avoids 10DLC specifically but not
+  consent/opt-out requirements). TCPA penalties run $500–$1,500 per message, not per
+  campaign, so exposure scales directly with volume — meaningful given this pattern's
+  entire pitch is volume.
+  **Design recommendation from both research passes:** make the missed-call text
+  **human-triggered (one-tap approve)** rather than fully automated — this strengthens
+  the "not an autodialer / individualized response" legal posture and also fits the
+  product's existing HITL design philosophy elsewhere. **Do not represent "they called
+  us first" as sufficient legal justification** for this pattern with a client — this is
+  the single feature most likely to create class-action exposure for a client (and
+  derivatively for the agency), and needs actual TCPA counsel review of the specific
+  message template, cadence, and state-scoping before it's sold to anyone. The findings
+  above are meant as the briefing document for that review, not a substitute for it.
 
 ## Technical risk
 
@@ -108,7 +140,13 @@
 - **Retainer framed as mandatory.** Positioning the ongoing SLA as non-optional is a
   double-edged design choice: it protects margin and system reliability, but it's also a
   harder sell than an optional add-on, and a client who balks at "mandatory" may walk from
-  the deal entirely rather than negotiate down. Needs real sales testing.
+  the deal entirely rather than negotiate down. **Updated 2026-07-23 — two independent
+  deep-research passes both recommend the same fix:** offer a one-time build-and-own
+  path at a premium ($5,000–$8,000+) alongside the incentivized retainer, rather than
+  presenting the retainer as the only path to engagement — see `docs/entrepreneur-notes.md`
+  for the full reasoning. Still needs real sales testing to confirm the fix actually
+  lands, but this is no longer just "needs testing," it's a specific, sourced
+  recommendation to test.
 - **Platform dependency risk.** The entire technical model is built on Make.com as the
   orchestration layer. Pricing changes, feature deprecations, or reliability issues on
   Make's side are a single point of failure for the whole business model — not addressed

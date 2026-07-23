@@ -60,28 +60,36 @@ that starts changing.
 - [ ] Talk to 5–10 real trade-business owners/ops people about their actual pain
       (`docs/feasibility.md` §"What needs to be validated") — **still not done, and now
       the single highest-leverage next action, and the only thing left blocking Phase 3**
-- [x] Run the `docs/research-handoff.md` queue and merge findings back — done in two
-      passes on 2026-07-23: a quick web-search first pass, then a full ChatGPT
-      deep-research pass (`research/2026-07-23-full-deep-research-chatgpt.md`) that
-      resolved all 6 questions (or confirmed unresolvable-by-web-research on the one that
-      needed to be) and **corrected an error** the quick pass had made on Anthropic's
-      data-retention figure. Question 3 (missed-call SMS legality) still needs an actual
-      lawyer, not more research — see `docs/risks.md`.
+- [x] Run the `docs/research-handoff.md` queue and merge findings back — done in three
+      passes on 2026-07-23: a quick web-search first pass, then two independent
+      deep-research passes as a cross-check — ChatGPT
+      (`research/2026-07-23-full-deep-research-chatgpt.md`) and Claude/Opus
+      (`research/2026-07-23-full-deep-research-opus.md`). Both resolved all 6 questions
+      (or confirmed unresolvable-by-web-research on the one that needed to be) and
+      **independently corrected the same error** the quick pass had made on Anthropic's
+      data-retention figure — genuine corroboration, since the two passes found entirely
+      different named competitors from each other yet reached the same conclusion.
+      Question 3 (missed-call SMS legality) still needs an actual lawyer, not more
+      research — see `docs/risks.md`.
 - [x] Sanity-check SLA pricing against what target businesses currently spend — done
-      2026-07-23 (deep research), see `docs/feasibility.md` and
-      `research/2026-07-23-full-deep-research-chatgpt.md`
-- [ ] Decide, based on the above, whether the ≥10-runs/week qualification bar is
-      realistic for the reachable prospect pool
+      2026-07-23, confirmed by both deep-research passes, see `docs/feasibility.md`
 
-**Finding that changes the priority order:** the deep-research pass confirmed and
-strengthened the earlier quick-search signal — at least 9 real, currently-active
-competitors serve this exact niche, and most don't require a mandatory retainer (one
-sells a $497 one-time, no-monthly, no-contract package). This is now a **sourced market
-fact**, not a hypothesis — see `docs/feasibility.md` and `docs/entrepreneur-notes.md`.
-Every remaining research question that could be answered from public data has been
-answered. The only things left in Phase 2 both require leaving this directory: real
+**Finding that changes the priority order:** both deep-research passes confirmed and
+strengthened the earlier quick-search signal, each finding a different set of real,
+currently-active competitors (17 total between them) — most don't require a mandatory
+retainer, several sell one-time builds and market explicitly against lock-in. This is
+now a **well-corroborated market fact**, not a hypothesis — see `docs/feasibility.md`
+and `docs/entrepreneur-notes.md`. Both passes independently recommend the same fix: stop
+presenting the retainer as mandatory, offer a one-time build-and-own path at a premium
+($5,000–$8,000+) alongside an incentivized ongoing retainer. Every remaining research
+question that could be answered from public data has been answered, by two independent
+sources. The only things left in Phase 2 both require leaving this directory: real
 conversations with trade-business owners (is the pain real, will they pay ongoing at
-all), and actual lawyer review of the missed-call SMS pattern before it's sold to anyone.
+all, does the two-path pricing land), and actual lawyer review of the missed-call SMS
+pattern before it's sold to anyone.
+- [ ] **New action item from research:** decide whether to adopt the two-path pricing
+      recommendation (one-time build-and-own + incentivized retainer) before or after
+      the first real prospect conversations — see `docs/entrepreneur-notes.md`.
 
 **Gate to Phase 3:** at least one real conversation confirming the pain is real *and*
 worth paying for, or a clear signal it's not (in which case: revisit `business-idea.md`'s
@@ -125,19 +133,25 @@ Stand up the first working pipeline, per `docs/infrastructure.md`.
 
 ## Current status (update this line as phases advance)
 
-**We are in Phase 2, in progress — the research-handoff queue is done.** Phase 1 is
-complete. All 6 research questions have been resolved (or correctly confirmed
-unresolvable by web research) via a real ChatGPT deep-research pass on 2026-07-23,
-which also corrected an error from an earlier quick-search first pass (Anthropic's data
-retention figure — see `docs/risks.md`). The confirmed headline finding: at least 9 real
-competitors serve this exact niche, and most don't require a mandatory retainer — this
-is now a sourced market fact, not a hypothesis, and directly threatens this packet's
-pricing model (see `docs/feasibility.md`, `docs/entrepreneur-notes.md`). Nothing left in
-Phase 2 can be resolved from inside this directory. The single highest-leverage next
-action: talk to real trade-business owners, specifically testing whether they'll pay an
-ongoing retainer at all given named competitors don't require one. The missed-call SMS
-workflow pattern also needs an actual lawyer before it's ever sold to a client — that's
-the other real-world action item research alone can't close.
+**We are in Phase 2, in progress — the research-handoff queue is done, twice over.**
+Phase 1 is complete. All 6 research questions have been resolved (or correctly
+confirmed unresolvable by web research) via two independent deep-research passes on
+2026-07-23 (ChatGPT and Claude/Opus) that found different named competitors from each
+other yet reached the same conclusions — real corroboration, not just a repeated search.
+Both independently corrected an error from an earlier quick-search first pass
+(Anthropic's data retention figure — see `docs/risks.md`). The confirmed headline
+finding: at least 17 real competitors (combined across both passes) serve this exact
+niche, and most don't require a mandatory retainer — this is now a well-corroborated
+market fact, not a hypothesis, and directly threatens this packet's pricing model. Both
+passes converge on the same fix: offer a one-time build-and-own path at a premium
+alongside an incentivized retainer, rather than presenting the retainer as mandatory
+(see `docs/feasibility.md`, `docs/entrepreneur-notes.md`). Nothing left in Phase 2 can
+be resolved from inside this directory. The single highest-leverage next action: talk to
+real trade-business owners, specifically testing whether they'll pay an ongoing retainer
+at all given named competitors don't require one, and whether the two-path pricing
+recommendation lands. The missed-call SMS workflow pattern also needs an actual lawyer
+before it's ever sold to a client — that's the other real-world action item research
+alone can't close.
 
 ## On the "reusable framework" idea
 

@@ -8,14 +8,19 @@
 ## Why this exists
 
 Everything in this packet started as reasoning from a single source document plus
-general priors. Two research passes have since run, both on 2026-07-23: a quick web
-search first (shallow, fast, useful for surfacing what mattered) and then a real ChatGPT
-deep-research pass (see `research/2026-07-23-full-deep-research-chatgpt.md`) that
-resolved all 6 questions properly and **corrected an outright error** the quick pass had
-made (Anthropic's data-retention figure). The status table below reflects the
-deep-research pass as current. Nothing in the queue currently needs another round unless
-something here becomes decision-critical enough to warrant a second opinion or direct
-competitor/legal outreach — see the status table for specifics.
+general priors. Three research passes have since run, all on 2026-07-23: a quick web
+search first (shallow, fast, useful for surfacing what mattered), then a real ChatGPT
+deep-research pass (`research/2026-07-23-full-deep-research-chatgpt.md`), then an
+independent Claude/Opus deep-research pass on the same prompt as a second opinion
+(`research/2026-07-23-full-deep-research-opus.md`). The two deep-research passes found
+**completely different named competitors from each other** while reaching the same
+conclusion on the retainer question — genuine independent corroboration, not just two
+runs of the same search — and both agree on the Anthropic data-retention correction
+(30 days, not the 7 days the quick pass had claimed). The Opus pass also added concrete
+pricing/legal recommendations the ChatGPT pass didn't include. The status table below
+reflects both deep-research passes as current. Nothing in the queue needs another round
+unless something here becomes decision-critical enough to warrant a third opinion or
+direct competitor/legal outreach.
 
 ## How to use this — the whole thing in one paste
 
@@ -238,26 +243,31 @@ times/week" — it needs real conversations with real shop owners, not web resea
 
 ## Current status of each question
 
-A full ChatGPT deep-research pass ran 2026-07-23 against the combined prompt above and
-resolved (or properly confirmed "not resolvable by web research" on) all 6 questions —
-see `research/2026-07-23-full-deep-research-chatgpt.md`. This **supersedes** the earlier
-quick-`WebSearch` first pass on every point, and **corrected one outright error** from
-that first pass (Anthropic's data-retention figure — see row 4).
+Two independent deep-research passes ran 2026-07-23 against the combined prompt above —
+ChatGPT (`research/2026-07-23-full-deep-research-chatgpt.md`) and Claude/Opus
+(`research/2026-07-23-full-deep-research-opus.md`) — and both resolved (or properly
+confirmed "not resolvable by web research" on) all 6 questions. Both **supersede** the
+earlier quick-`WebSearch` first pass, and both **independently corrected the same
+error** from that first pass (Anthropic's data-retention figure — see row 4). Where the
+two deep-research passes found different specifics (e.g. different named competitors),
+that's noted below as corroboration, not conflict — see `docs/feasibility.md` and
+`docs/entrepreneur-notes.md` for the merged view.
 
 | # | Question | Status |
 | - | -------- | ------ |
-| 1 | Competitor landscape / mandatory retainer viability | ✅ **Resolved 2026-07-23** (real deep research) — confirmed and strengthened: 9 real competitors found, most not requiring a mandatory retainer. See `docs/feasibility.md` and `docs/entrepreneur-notes.md`. |
-| 2 | Baseline software/labor spend | ✅ **Resolved 2026-07-23** (real deep research) — refined ranges, plus identified direct automation competitors as the closer pricing comparison than CRM software. |
-| 3 | Missed-call SMS legal compliance | ⚠️ **Deep-research pass done 2026-07-23** — genuinely unsettled area, not a clean answer even with real research. A safer message pattern and 10DLC requirements were identified. **Still requires actual lawyer review before this workflow pattern is sold to anyone** — do not treat as resolved in the legal sense, only as "as researched as this can get without counsel." |
-| 4 | LLM provider data retention / ZDR | ✅ **Resolved 2026-07-23** (real deep research) — **corrected an error from the first pass**: Anthropic's default is 30 days, not 7 days as the quick-search pass had claimed. See `docs/risks.md` and `docs/infrastructure.md`, both updated. |
-| 5 | Build-time/pricing benchmark | ✅ **Resolved 2026-07-23** (real deep research) — concrete estimate: $4,000–$10,000 (freelancer) to $7,000–$18,000 (small agency) per pipeline. |
-| 6 | Market size / qualification rate | ⬜ **Confirmed not answerable from public data** (both the quick pass and the real deep-research pass agree) — still needs real conversations, per `FRAMEWORK.md` Phase 2. Establishment-count data (Census) was found as candidate-pool context only, not a frequency answer. |
+| 1 | Competitor landscape / mandatory retainer viability | ✅ **Resolved 2026-07-23, confirmed by two independent passes** — ChatGPT found 9 competitors, Opus independently found 8 different ones; both conclude mandatory retainer is common but not universal, and both recommend the same fix (one-time build-and-own path + incentivized retainer). See `docs/feasibility.md` and `docs/entrepreneur-notes.md`. |
+| 2 | Baseline software/labor spend | ✅ **Resolved 2026-07-23, confirmed by both passes** — closely converging ranges; identified direct automation competitors as the closer pricing comparison than CRM software. |
+| 3 | Missed-call SMS legal compliance | ⚠️ **Researched by both passes 2026-07-23** — genuinely unsettled area even with real research; Opus added specific case citations (*Butera*, *Steidinger* vs. *Howard* circuit split, *McLaughlin*, *Insurance Marketing Coalition v. FCC*) and a concrete design recommendation (human-triggered send). **Still requires actual lawyer review before this workflow pattern is sold to anyone** — do not treat as resolved in the legal sense, only as "as researched as this can get without counsel." |
+| 4 | LLM provider data retention / ZDR | ✅ **Resolved 2026-07-23, independently confirmed by both passes** — Anthropic's default is 30 days, not 7 days as the quick-search pass had claimed; both deep-research passes agree. See `docs/risks.md` and `docs/infrastructure.md`, both updated. |
+| 5 | Build-time/pricing benchmark | ✅ **Resolved 2026-07-23, confirmed by both passes** — closely converging estimates (~$6,000–$9,000/pipeline midpoint); Opus adds a concrete recommendation to set the fee at ≥$3,000, target $5,000–$8,000. |
+| 6 | Market size / qualification rate | ⬜ **Confirmed not answerable from public data by all three passes** (quick pass and both deep-research passes agree) — still needs real conversations, per `FRAMEWORK.md` Phase 2. Establishment-count data (Census/IBISWorld) was found as candidate-pool context only, not a frequency answer — see `docs/entrepreneur-notes.md` for the numbers. |
 
-**Nothing left in the queue needs another research round** except optionally deepening
-question 3 further (a second opinion, or direct outreach to competitors on question 1) if
-it becomes decision-critical. The real remaining blocker across the board is Phase 2's
-primary research: talking to actual trade-business owners, and getting question 3 in
-front of an actual lawyer.
+**Nothing left in the queue needs another research round.** The two independent
+deep-research passes corroborate each other closely enough that a third opinion isn't
+likely to add much, short of direct competitor outreach or actual legal counsel on
+question 3. The real remaining blocker across the board is Phase 2's primary research:
+talking to actual trade-business owners, and getting question 3 in front of an actual
+lawyer.
 
 ## After you get a response back
 
