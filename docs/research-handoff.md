@@ -8,12 +8,14 @@
 ## Why this exists
 
 Everything in this packet started as reasoning from a single source document plus
-general priors. A first pass of research was run on 2026-07-23 via quick web search (see
-`research/`), which is faster but shallower than a real deep-research session — good
-enough to find that one competitor doesn't require a retainer at all (a real threat to
-this business's pricing model), but not thorough enough to be the final word on anything
-here. The right tool for a deeper pass is a **deep research engine with live web access**
-(Claude.ai research mode, ChatGPT research mode), run by you in the browser.
+general priors. Two research passes have since run, both on 2026-07-23: a quick web
+search first (shallow, fast, useful for surfacing what mattered) and then a real ChatGPT
+deep-research pass (see `research/2026-07-23-full-deep-research-chatgpt.md`) that
+resolved all 6 questions properly and **corrected an outright error** the quick pass had
+made (Anthropic's data-retention figure). The status table below reflects the
+deep-research pass as current. Nothing in the queue currently needs another round unless
+something here becomes decision-critical enough to warrant a second opinion or direct
+competitor/legal outreach — see the status table for specifics.
 
 ## How to use this — the whole thing in one paste
 
@@ -170,7 +172,7 @@ Each of these repeats the same business-context paragraph so it stands alone. Sk
 question already marked resolved below unless you specifically want a deeper re-check.
 
 <details>
-<summary>Question 1 — Competitor landscape (still worth deepening — highest priority)</summary>
+<summary>Question 1 — Competitor landscape (resolved 2026-07-23; kept here only for a second opinion or direct outreach follow-up)</summary>
 
 ```
 I'm evaluating a business idea: a Make.com-based automation agency ("Workflow Repair
@@ -191,7 +193,7 @@ sell one-time builds with no ongoing commitment? Please cite sources and dates.
 </details>
 
 <details>
-<summary>Question 3 — Missed-call SMS legal compliance (still needs a rigorous answer)</summary>
+<summary>Question 3 — Missed-call SMS legal compliance (researched 2026-07-23; still needs an actual lawyer, not another research pass)</summary>
 
 ```
 I'm evaluating a business idea: a Make.com-based automation agency building automation
@@ -236,14 +238,26 @@ times/week" — it needs real conversations with real shop owners, not web resea
 
 ## Current status of each question
 
+A full ChatGPT deep-research pass ran 2026-07-23 against the combined prompt above and
+resolved (or properly confirmed "not resolvable by web research" on) all 6 questions —
+see `research/2026-07-23-full-deep-research-chatgpt.md`. This **supersedes** the earlier
+quick-`WebSearch` first pass on every point, and **corrected one outright error** from
+that first pass (Anthropic's data-retention figure — see row 4).
+
 | # | Question | Status |
 | - | -------- | ------ |
-| 1 | Competitor landscape / mandatory retainer viability | ⚠️ First pass done 2026-07-23 (quick web search) — found a no-retainer competitor, load-bearing enough to be worth the deeper pass in the combined prompt above. |
-| 2 | Baseline software/labor spend | ✅ First pass resolved 2026-07-23 — rerun only for a deeper check. |
-| 3 | Missed-call SMS legal compliance | ⚠️ First pass surfaced a real tension, not resolved — still needs the deeper pass, then an actual lawyer. |
-| 4 | LLM provider data retention / ZDR | ✅ First pass resolved 2026-07-23 — rerun only for a deeper check. |
-| 5 | Build-time/pricing benchmark | ✅ First pass resolved 2026-07-23 — rerun only for a deeper check. |
-| 6 | Market size / qualification rate | ⬜ Not a research question — needs real conversations (`FRAMEWORK.md` Phase 2). |
+| 1 | Competitor landscape / mandatory retainer viability | ✅ **Resolved 2026-07-23** (real deep research) — confirmed and strengthened: 9 real competitors found, most not requiring a mandatory retainer. See `docs/feasibility.md` and `docs/entrepreneur-notes.md`. |
+| 2 | Baseline software/labor spend | ✅ **Resolved 2026-07-23** (real deep research) — refined ranges, plus identified direct automation competitors as the closer pricing comparison than CRM software. |
+| 3 | Missed-call SMS legal compliance | ⚠️ **Deep-research pass done 2026-07-23** — genuinely unsettled area, not a clean answer even with real research. A safer message pattern and 10DLC requirements were identified. **Still requires actual lawyer review before this workflow pattern is sold to anyone** — do not treat as resolved in the legal sense, only as "as researched as this can get without counsel." |
+| 4 | LLM provider data retention / ZDR | ✅ **Resolved 2026-07-23** (real deep research) — **corrected an error from the first pass**: Anthropic's default is 30 days, not 7 days as the quick-search pass had claimed. See `docs/risks.md` and `docs/infrastructure.md`, both updated. |
+| 5 | Build-time/pricing benchmark | ✅ **Resolved 2026-07-23** (real deep research) — concrete estimate: $4,000–$10,000 (freelancer) to $7,000–$18,000 (small agency) per pipeline. |
+| 6 | Market size / qualification rate | ⬜ **Confirmed not answerable from public data** (both the quick pass and the real deep-research pass agree) — still needs real conversations, per `FRAMEWORK.md` Phase 2. Establishment-count data (Census) was found as candidate-pool context only, not a frequency answer. |
+
+**Nothing left in the queue needs another research round** except optionally deepening
+question 3 further (a second opinion, or direct outreach to competitors on question 1) if
+it becomes decision-critical. The real remaining blocker across the board is Phase 2's
+primary research: talking to actual trade-business owners, and getting question 3 in
+front of an actual lawyer.
 
 ## After you get a response back
 

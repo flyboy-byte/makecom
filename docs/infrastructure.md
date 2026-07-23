@@ -20,13 +20,19 @@ technical architecture in `make.com review.md` (primarily §2–4 and §7).
   Make's token markup and to get precise rate-limit/usage visibility in the provider's own
   dashboard (`review.md` §2.2, "Token Isolation via HTTP Modules"). This means you need a
   developer-level API key and to track spend directly against provider billing, not Make
-  credits. **Update (2026-07-23, web search, see
-  `research/2026-07-23-llm-provider-data-retention-claude-websearch.md`):** if a client
-  needs Zero Data Retention, it's not a self-service toggle on either provider — OpenAI
-  requires an explicit enterprise request/approval on supported endpoints only, and
-  Anthropic's ZDR is scoped to eligible API usage / Claude Code on Claude Enterprise, not
-  blanket coverage. Budget lead time for this if a client's compliance needs require it,
-  rather than assuming it can be flipped on at deployment time.
+  credits. **Update (2026-07-23, real ChatGPT deep-research pass, see
+  `research/2026-07-23-full-deep-research-chatgpt.md`):** if a client needs Zero Data
+  Retention, it's not a self-service toggle on either provider — OpenAI requires an
+  explicit enterprise request/approval on supported endpoints only, and Anthropic's ZDR
+  requires Anthropic approval and is scoped to API usage and products using the org's
+  commercial API key (including Claude Code) — it does not cover Workbench in Console,
+  Claude for Work, Claude Max, or beta products. Default retention (absent a ZDR
+  arrangement) is **30 days for both providers** — an earlier quick-search pass had
+  claimed Anthropic dropped to 7 days, which a deeper research pass could not verify
+  against current first-party Anthropic docs and should be treated as incorrect. Budget
+  lead time for ZDR approval if a client's compliance needs require it, rather than
+  assuming it can be flipped on at deployment time, and verify the current figure against
+  the provider's live docs before quoting a number to a client — these terms move.
 - **Client-side systems** the pipelines integrate with — varies per client, but the worked
   examples name: a CRM/dispatch tool, an ERP/inventory database, Google Drive (for invoice
   ingestion), Slack (for HITL approval and operational alerts), Twilio (for SMS), and a

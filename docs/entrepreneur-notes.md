@@ -23,23 +23,29 @@ Update this file as answers come in from real client conversations.
 ## Pricing rationale (untested)
 
 - The SLA tiers ($499 / $1,250 / $2,950+) are plausible for the value described (patch
-  windows, audits, credit pool management) but are not benchmarked against anything in the
-  source material or validated with prospects. **Partial answer (2026-07-23, web search,
-  see `research/2026-07-23-trade-software-baseline-cost-claude-websearch.md` and
-  `research/2026-07-23-competitor-pricing-claude-websearch.md`):** existing HVAC
-  CRM/dispatch software already runs $29–$1,750/mo depending on tier, so this packet's
-  retainer isn't priced in an alien range for the buyer — but at least one competitor
-  automation agency was found offering a **one-time build with no monthly retainer at
-  all**, which directly threatens the "mandatory retainer" premise. This is now the
-  single highest-priority thing to test with a real prospect: not "is $499/mo
-  reasonable" but "will they pay ongoing at all when a competitor doesn't require it."
+  windows, audits, credit pool management) but were not benchmarked against anything in
+  the source material. **Resolved 2026-07-23** (real ChatGPT deep-research pass, see
+  `research/2026-07-23-full-deep-research-chatgpt.md`, supersedes the earlier quick-search
+  first pass): against mainstream HVAC/auto-repair CRM-dispatch software ($200–$700/mo),
+  the retainer isn't priced in an alien range. But against the **closer substitute** —
+  at least 9 real, currently-active competitors selling automation into this exact niche
+  (Never Miss Work, Gabe Works, CallbackPro, AutoShop SMS AI, Automation Warrior,
+  TradeWire, Pigeon AI, ContractorOps, CloseLoop) — most price one-time, cancel-anytime,
+  or hybrid, not mandatory-retainer. Never Miss Work specifically sells a **$497 one-time,
+  no-monthly, no-contract** package. This is now a **confirmed market fact, not a
+  hypothesis**: mandatory retainer is not the visible norm in this niche. The
+  highest-priority thing to test with a real prospect is no longer "is $499/mo
+  reasonable" but "will they pay ongoing at all when named competitors don't require it
+  — and if not, is there a fallback offer" (see below).
 - The one-time implementation fee is an open blank in the SOW template (`review.md` §6).
-  **Rough floor established (2026-07-23):** general Make.com freelance project rates run
-  $1,500–$5,000+ for complex workflows (`research/2026-07-23-automation-build-cost-benchmark-claude-websearch.md`),
-  and this packet's target workflows are at or above that complexity band before counting
-  discovery/testing overhead — so the fee likely needs to sit at or above that range. Still
-  needs a real time-tracked build (Phase 3 in `FRAMEWORK.md`) to set an actual number
-  rather than a market-rate proxy.
+  **Resolved 2026-07-23** (real deep-research pass, supersedes the earlier rougher
+  quick-search estimate): realistic fully-loaded price for one pipeline at this packet's
+  actual scope is **$4,000–$10,000 (experienced freelancer) to $7,000–$18,000 (small
+  agency)**, ~40–90 hours, practical budgeting midpoint **~$6,000–$9,000**, 2–4 weeks
+  elapsed — well above generic "simple Zapier automation" pricing ($149–$975 one-time),
+  which matches the added scope of discovery, formal testing, and the HITL/idempotency
+  architecture. Still worth confirming against a real time-tracked build (Phase 3 in
+  `FRAMEWORK.md`), but this is now a real benchmark, not a rough proxy.
 
 ## Go-to-market — open questions
 
@@ -67,14 +73,19 @@ Update this file as answers come in from real client conversations.
 5. Decide whether "mandatory retainer" framing survived contact with a real client, or
    needs softening.
 
-## New open question from research (2026-07-23)
+## New open question from research (2026-07-23, confirmed by deep-research pass)
 
-Given at least one competitor was found offering a no-retainer, one-time-build model
-(see pricing rationale above), it's worth deciding in advance whether "mandatory
-retainer" is a hill to defend in a first sales conversation, or whether there's a
-fallback position (e.g., an optional retainer with a clearly worse SLA/no-retainer
-tier, rather than an all-or-nothing mandate) — better to have that fallback thought
-through before a prospect pushes back mid-conversation than to improvise one on the spot.
+Given multiple sourced competitors offer no-retainer or cancel-anytime pricing (see
+pricing rationale above and `research/2026-07-23-full-deep-research-chatgpt.md`), it's
+worth deciding in advance whether "mandatory retainer" is a hill to defend in a first
+sales conversation, or whether there's a fallback position (e.g., an optional retainer
+with a clearly worse SLA/no-retainer tier, rather than an all-or-nothing mandate) —
+better to have that fallback thought through before a prospect pushes back mid-conversation
+than to improvise one on the spot. The research also suggests a specific differentiation
+angle if the mandatory framing is kept: sell it as compliance-grade, formally tested,
+audited infrastructure (the 50-valid/10-malformed test suite, signature verification,
+idempotency, HITL) rather than generic "maintenance" — that's the gap between this
+packet's engineering rigor and what the cheaper no-retainer competitors appear to offer.
 
 ## Things to explicitly decide before writing a real contract
 

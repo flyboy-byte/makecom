@@ -18,15 +18,25 @@
   manual itself flags that Make's webhook queue still transiently holds data during
   transit. Mitigation: don't oversell "your data is safe" to clients without being
   precise about what's actually scrubbed vs. transiently cached vs. retained.
-  **Update (2026-07-23, web search, see
-  `research/2026-07-23-llm-provider-data-retention-claude-websearch.md`):** the manual's
-  "30-Day Retention" figure is now stale for Anthropic specifically — standard Claude API
-  retention dropped to **7 days** as of September 2025. OpenAI's default remains 30 days.
-  ZDR is real for both but is not a simple settings flag: for OpenAI it requires an
-  explicit enterprise request and approval on supported endpoints only; for Anthropic
-  it's scoped to eligible API usage and Claude Code on Claude Enterprise, not blanket
-  chat-interface coverage, and certain "Covered Models" are excluded from ZDR entirely.
-  Don't represent ZDR to clients as a checkbox either provider just flips on request.
+  **Update (2026-07-23, real ChatGPT deep-research pass, see
+  `research/2026-07-23-full-deep-research-chatgpt.md`) — this corrects an earlier quick
+  web-search finding:** an initial quick-search pass had claimed Anthropic's retention
+  dropped to 7 days as of September 2025. A proper deep-research pass could not verify
+  that against current first-party Anthropic materials — **Anthropic's current public
+  commercial-data documentation states 30 days by default**, same as OpenAI, unless a
+  specific ZDR arrangement is in place. Treat the "7 days" figure as unconfirmed/likely
+  wrong going forward; the manual's original "30-Day Retention" framing was closer to
+  correct than the quick-search correction was. ZDR is real for both providers but is not
+  a simple settings flag: OpenAI requires an explicit enterprise request/approval, not
+  self-serve; Anthropic's ZDR requires Anthropic approval, is scoped to API usage and
+  products using the org's commercial API key (including Claude Code) — it does **not**
+  cover Workbench in Console, Claude for Work, Claude Max, or beta products — and
+  UserSafety classifier results are retained even under ZDR. Files API, some batch API
+  calls, explicit prompt caching, and third-party web-search results can also override or
+  fall outside ZDR assumptions for either provider. Don't represent ZDR to clients as a
+  checkbox either provider just flips on request, and don't cite a specific retention
+  number to a client without checking the provider's current first-party docs at the
+  time, not this doc — these numbers move.
 - **Liability for automation errors reaching customers or financial records.** The
   manual's stated mitigation is structural — Human-in-the-Loop gates mean nothing writes
   live data or messages customers without human approval (§2.2, §4.2) — combined with a
@@ -46,18 +56,31 @@
   using them with a real client — this is the single highest-leverage risk-reduction step
   before signing anyone.
 - **TCPA exposure in the missed-call SMS resuscitation pattern specifically.**
-  **New finding (2026-07-23, web search, informational only — not legal advice, see
-  `research/2026-07-23-tcpa-sms-compliance-claude-websearch.md`):** the worked example in
-  `review.md` §7.3 sends an automated first text to someone who just called but has no
-  prior account/relationship — several sources describe missed-call text-back as needing
-  *prior express written consent* before that first automated text, which is in direct
-  tension with the pattern as designed (the whole point is texting someone with no prior
-  relationship). TCPA penalties run $500–$1,500 per message, not per campaign, so exposure
-  scales with volume — meaningful given this pattern's entire pitch is volume. This needs
-  actual legal review before this specific pattern is sold to any client, not just the
-  general MSA review already flagged above — flag it as its own line item, since it could
-  mean this particular worked example needs redesigning (e.g., an opt-in-gated first
-  message) rather than just needing better contract language.
+  **Updated (2026-07-23, real ChatGPT deep-research pass — informational only, not legal
+  advice, see `research/2026-07-23-full-deep-research-chatgpt.md`):** the worked example
+  in `review.md` §7.3 sends an automated first text to someone who just called but has no
+  prior account/relationship. This is genuinely unsettled, not a clean violation or a
+  clean exemption: federal rule (47 C.F.R. § 64.1200) requires prior express consent for
+  autodialed texts and prior express *written* consent specifically if the message counts
+  as telemarketing; case law (e.g. Latner v. Mount Sinai) supports consent extending to
+  messages "closely related" to why the number was given, which helps an immediate,
+  non-promotional, purely contextual first text — but no primary FCC ruling was found
+  creating a clean missed-call-specific safe harbor (the often-cited SoundBite ruling
+  covers a reply to the consumer's own *text*, not a voice call). Facebook v. Duguid
+  narrowed the autodialer definition in ways that may help simple caller-ID-triggered
+  systems, but McLaughlin v. McKesson and a July 2026 Seventh Circuit ruling keep this
+  area actively contested rather than settled. **Safer first-message pattern identified:**
+  contextual, non-promotional, identifies the business, includes opt-out language (e.g.
+  "Hi, this is [Business]. Sorry we missed your call. Reply with what you need and we'll
+  follow up. Reply STOP to opt out.") — avoid anything that reads as an offer/promotion
+  in that first message. **10DLC registration is required** for standard long-code SMS
+  (brand + campaign registration, sample messages, consent-flow description; toll-free
+  avoids 10DLC specifically but not consent/opt-out requirements). TCPA penalties run
+  $500–$1,500 per message, not per campaign, so exposure scales directly with volume —
+  meaningful given this pattern's entire pitch is volume. **Do not represent "they called
+  us first" as sufficient legal justification** for this pattern with a client — this
+  needs actual legal review before it's sold to anyone, and the finding above is meant as
+  the briefing document for that review, not a substitute for it.
 
 ## Technical risk
 

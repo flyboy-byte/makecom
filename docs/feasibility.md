@@ -21,15 +21,22 @@ forecast.
   candidate businesses will fail this test, especially the volume threshold. Worth
   validating what fraction of realistic prospects actually clear it before assuming a
   large addressable pool.
-- **Update (2026-07-23, web search, see `research/2026-07-23-competitor-pricing-claude-websearch.md`):**
-  competitor agencies serving trades including HVAC were found charging **$2,000–$15,000
-  one-time for a build, with no monthly retainer required** in at least some offerings —
-  this is a direct contradiction of this packet's "mandatory retainer" assumption and is
-  the single most important finding from this research pass. This was a standard web
-  search, not a full deep-research or direct-outreach pass, so treat this as a first
-  signal to test against real competitor conversations, not a settled fact — but it's
-  strong enough to make "will clients accept the retainer as mandatory" (item 3 below)
-  the highest-priority open question in this doc.
+- **Update (2026-07-23, real ChatGPT deep-research pass, see
+  `research/2026-07-23-full-deep-research-chatgpt.md`) — confirms and strengthens the
+  earlier quick-search finding:** a proper deep-research pass identified at least 9 real,
+  currently-active competitors selling automation to this exact niche (HVAC, auto repair,
+  and adjacent trades) — Never Miss Work, Gabe Works, CallbackPro, AutoShop SMS AI,
+  Automation Warrior, TradeWire, Pigeon AI, ContractorOps, CloseLoop. Most use one-time,
+  cancel-anytime, or hybrid setup-plus-cancellable pricing, not a mandatory long-term
+  retainer. Never Miss Work sells a contractor package at **$497 one-time, no monthly
+  fee, no contract** — a direct, well-sourced contradiction of this packet's mandatory-
+  retainer premise. This is no longer a "first signal to test" — it's a sourced market
+  fact: **mandatory retainer as a condition of entry is not the visible norm in this
+  niche.** The retainer needs to be sold on a specific differentiator (reliability,
+  incident response speed, formal testing, auditability, legal/compliance discipline),
+  not just "maintenance exists," or expect prospects to price-shop toward these
+  no-contract alternatives. This is now the single most important open question to
+  resolve with a real prospect conversation, ahead of everything else in this doc.
 
 ## What needs to be validated before investing real time
 
@@ -48,14 +55,18 @@ In rough priority order:
 4. **Competitive pricing sanity check.** $499–$2,950+/mo plus an implementation fee needs
    to be checked against what trade businesses currently pay for comparable software
    (CRM/dispatch tools, virtual assistants, existing automation vendors) to know if it's
-   priced sanely for the buyer. **Partially resolved (2026-07-23):** existing HVAC
-   CRM/dispatch software alone runs roughly $29–$329/mo (small/mid tier) to $700–$1,750/mo
-   (enterprise tier, e.g. ServiceTitan) — see
-   `research/2026-07-23-trade-software-baseline-cost-claude-websearch.md`. This packet's
-   retainer tiers land inside or above that range for a *second* piece of paid
-   infrastructure on top of existing software spend, which cuts both ways: either the
-   market already tolerates this price band for software, or budget headroom is thinner
-   than assumed. Still needs a real prospect conversation to resolve which reading holds.
+   priced sanely for the buyer. **Resolved 2026-07-23** (real deep-research pass, see
+   `research/2026-07-23-full-deep-research-chatgpt.md`): mainstream HVAC CRM/dispatch
+   software clusters at **~$200–$700/mo** (Jobber $199–499/mo, Housecall Pro $79–329/mo
+   + per-user, Service Fusion $245–627/mo), with ServiceTitan far above that
+   (~$245–500/tech/mo plus $5k–$50k+ implementation). Auto-repair software clusters
+   similarly, ~$200–$500/mo (Tekmetric, Shopmonkey). But the **closer substitute for
+   pricing purposes isn't CRM software at all — it's the direct automation competitors
+   identified above, selling at $8–$297/mo or $497 one-time.** Against CRM-software
+   spend, this packet's retainer sits in a plausible range; against direct competitors,
+   it's priced well above the visible market. Both comparisons matter, but the second one
+   is more load-bearing given it's an apples-to-apples product comparison, not just a
+   budget-line comparison.
 
 ## Cost side (founder/operator time and cash)
 
@@ -74,15 +85,19 @@ Rough categories to size, using the technical manual as the basis for scope:
   1,000/min Enterprise per `review.md` §2), plus direct LLM API costs (bypassing Make's
   native AI markup by using HTTP modules directly, per §2.2 — this lowers per-run cost
   but shifts billing to you directly against usage).
-- **Build cost benchmark (2026-07-23, web search, see
-  `research/2026-07-23-automation-build-cost-benchmark-claude-websearch.md`):** general
-  freelance Make.com project rates run $1,500–$5,000+ for complex workflows, or
-  $100–150/hr for experienced work — this packet's target workflows (signature
-  verification, idempotency, LLM extraction, schema validation, HITL gate, plus formal
-  50-run/10-failure testing) sit at or above that complexity band, before counting the
-  discovery process. Gives a rough floor for the still-blank implementation fee in the
-  SOW template (§6), but a real time-tracked build (Phase 3 in `FRAMEWORK.md`) remains
-  the more reliable way to set the actual number.
+- **Build cost benchmark — resolved 2026-07-23** (real deep-research pass, see
+  `research/2026-07-23-full-deep-research-chatgpt.md`, supersedes the earlier rougher
+  quick-search estimate): basic Zapier-style automations sell for $149–$975 one-time —
+  much simpler than this packet's scoped deliverable. For work at this packet's actual
+  scope (discovery, webhook signature verification, idempotency, direct LLM API calls,
+  schema validation, HITL gate, formal 50-valid/10-malformed test suite), a realistic
+  fully-loaded price is **$4,000–$10,000 for an experienced freelancer, $7,000–$18,000
+  for a small agency**, roughly **40–90 hours**, practical budgeting midpoint
+  **~$6,000–$9,000/pipeline**, 2–4 weeks elapsed. This gives a real floor for the
+  still-blank implementation fee in the SOW template (§6) — pricing materially below
+  this range likely means under-scoped testing/hardening; a real time-tracked build
+  (Phase 3 in `FRAMEWORK.md`) is still worth doing to confirm against this benchmark
+  rather than replace it.
 
 ## Time-to-first-dollar
 
