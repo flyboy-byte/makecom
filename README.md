@@ -1,57 +1,76 @@
-# Workflow Repair Agency — Business Idea Packet
+# Workflow Repair
 
-**Start at [`FRAMEWORK.md`](./FRAMEWORK.md)** — it tracks what phase this project is
-actually in and what has to happen next. This README is the doc index; `FRAMEWORK.md` is
-the status tracker and the thing worth re-opening after time away.
+**A phase-gated evaluation of a Make.com automation practice — built from one source
+document, expanded in the open, and fact-checked against itself.**
 
-This directory is a staged expansion of a potential business: a **Make.com-based
-"Workflow Repair" service** that builds deterministic, fault-tolerant automation
-pipelines for any business whose workflows pass a specific qualification test (high
-volume, unstructured input, structured destination — see `docs/business-idea.md`), with
-an ongoing maintenance retainer offered on top. **Updated 2026-07-23:** originally scoped
-narrowly to HVAC and auto-repair trade businesses (the source manual's example
-verticals); the target is now defined by the qualification test rather than by industry.
-HVAC/auto-repair remain this project's researched case study — see `docs/feasibility.md`
-— but are an example of the target, not its definition.
+📖 **[Read it as a site → flyboy-byte.github.io/makecom](https://flyboy-byte.github.io/makecom/)**
+· built from these files on every push
 
-The original technical/operating manual — `make.com review.md` (and the matching PDF) —
-is the source material. It already defines the operating model in detail: client
-qualification, engineering standards, testing/deployment process, data governance, SLA
-retainer tiers, an SOW template, and three worked automation examples. Treat that file as
-the **technical spine**. The docs below are the **strategic layer** built on top of it,
-written to help decide whether this is worth pursuing and how to start.
+---
 
-## Contents
+This started as a single technical manual sitting in Google Drive
+([`make.com review.md`](./make.com%20review.md)) describing an automation consultancy:
+build deterministic, human-supervised pipelines that turn messy input (emails, PDFs,
+missed calls) into structured records in a business's CRM or ERP, then charge for the
+build and the upkeep.
 
-| Doc | Tier | Purpose |
-| --- | --- | --- |
-| [`FRAMEWORK.md`](./FRAMEWORK.md) | Meta | Phase-gated status tracker — where this project actually is and what's next |
-| [`make.com review.md`](./make.com%20review.md) | Low-level | Original technical/operating manual (source material) — architecture, SLA tiers, SOW, code walkthroughs |
-| [`docs/documentation-guide.md`](./docs/documentation-guide.md) | Meta | Explains the tiers below, who each doc is for, and how they fit together |
-| [`docs/business-idea.md`](./docs/business-idea.md) | High-level | The pitch: what it is, who it's for, why now, what makes it different |
-| [`docs/feasibility.md`](./docs/feasibility.md) | High-level | Market demand, competition, unit economics, time-to-first-dollar |
-| [`docs/architecture.md`](./docs/architecture.md) | Low-level | The vertical-agnostic technical reference architecture — what's fixed vs. pluggable per client |
-| [`docs/vertical-playbook.md`](./docs/vertical-playbook.md) | Mixed | Repeatable process for screening a new vertical and onboarding a new client |
-| [`docs/vertical-scenarios.md`](./docs/vertical-scenarios.md) | High-level | Three hypothetical verticals stress-testing whether the qualification-test framing actually holds |
-| [`docs/infrastructure.md`](./docs/infrastructure.md) | Low-level | What you actually need to stand this up — accounts, tools, stack |
-| [`docs/risks.md`](./docs/risks.md) | Mixed | Legal, technical, market, and operational risks with mitigations |
-| [`docs/entrepreneur-notes.md`](./docs/entrepreneur-notes.md) | High-level | Positioning, pricing rationale, go-to-market, open questions, next steps |
-| [`docs/research-handoff.md`](./docs/research-handoff.md) | Meta | Workflow for offloading unverified claims to Claude/ChatGPT deep research |
-| [`research/`](./research/) | — | Intake folder for raw output from those research sessions |
+This repo is what happened when that one document was taken seriously — expanded into a
+strategic case, an architecture, a risk map, and a research queue, then checked against
+reality. Some of it survived that check. Some of it didn't.
 
-## How to use this packet
+## What's actually here
 
-Start with [`docs/documentation-guide.md`](./docs/documentation-guide.md) — it explains
-the high-level/low-level split and which docs are for deciding vs. building. Short version:
+It is documents. That's the honest description — scaffolding, plans, architecture, and
+research, written as Markdown. The [site](https://flyboy-byte.github.io/makecom/) exists
+because a pile of interlinked Markdown files doesn't communicate what it collectively
+adds up to; the landing page shows the phase status, what's settled versus still a
+guess, and how the pieces were actually produced.
 
-1. Read `docs/business-idea.md` first for the framing.
-2. Read `docs/feasibility.md` and `docs/risks.md` together — they're the go/no-go inputs.
-3. `docs/infrastructure.md` is what it costs (in setup effort and dollars) to actually build
-   the first client pipeline.
-4. `docs/entrepreneur-notes.md` is the working scratchpad of decisions still open.
-5. When a doc flags a claim as unverified, check `docs/research-handoff.md` — it's likely
-   already queued for a Claude/ChatGPT deep-research pass, with a ready-to-use prompt.
+| | Doc | What it's for |
+|---|---|---|
+| **Start** | [`FRAMEWORK.md`](./FRAMEWORK.md) | Phase tracker. Where this genuinely is, and what has to happen next. Gates advance by doing something outside these files, never by writing more of them. |
+| **The case** | [`docs/business-idea.md`](./docs/business-idea.md) | The pitch: what it is, who it's for, what's actually novel versus just competent. |
+| | [`docs/feasibility.md`](./docs/feasibility.md) | Demand, competitors, unit economics, and what still needs validating. |
+| | [`docs/vertical-scenarios.md`](./docs/vertical-scenarios.md) | Three hypothetical industries stress-testing whether the model generalises. One of them broke it. |
+| | [`docs/entrepreneur-notes.md`](./docs/entrepreneur-notes.md) | Live scratchpad of decisions still open. |
+| **The build** | [`docs/architecture.md`](./docs/architecture.md) | Eight-stage reference pipeline, split into what's fixed for every client and what's pluggable per client. |
+| | [`docs/infrastructure.md`](./docs/infrastructure.md) | Accounts, tooling, and what it costs to stand up. |
+| | [`make.com review.md`](./make.com%20review.md) | The original source manual. The technical spine everything else is built on. |
+| **Cross-cutting** | [`docs/risks.md`](./docs/risks.md) | Legal, technical, market, operational — including a genuinely unsettled TCPA problem. |
+| | [`docs/vertical-playbook.md`](./docs/vertical-playbook.md) | Repeatable screening for a new industry, then a new client. |
+| **About the packet** | [`docs/documentation-guide.md`](./docs/documentation-guide.md) | The tier system: which docs answer "should we" versus "how would we". |
+| | [`docs/research-handoff.md`](./docs/research-handoff.md) | How unverifiable claims get handed to an external research engine, with the prompt used. |
+| **Evidence** | [`research/`](./research/) | Raw, unedited output from every research pass, with citations. |
 
-Everything here is inferred from the single source document plus general reasoning about
-the automation-agency space — it has not been validated against real client conversations,
-pricing tests, or a working prototype. Treat conclusions as hypotheses to test, not facts.
+## The part worth knowing
+
+Everything here is inference unless a page says otherwise. No customer has been spoken
+to. Nothing has been built. The one thing this packet tries hard to do is keep a clean
+line between what's been established, what's still assumed, and what turned out to be
+wrong — that last category is real:
+
+- **"Anthropic retains API data for 7 days."** Wrong; it's 30. A fast web search
+  produced it, and two independent deep-research passes caught it.
+- **"The maintenance retainer is mandatory."** Inherited from the source manual.
+  Research found 17 competitors, several selling one-time builds and marketing
+  explicitly against lock-in. It's a competitive liability, not a given.
+- **"This is a business for HVAC and auto-repair shops."** Those were the manual's
+  *examples*, mistaken for the definition. The target is now a qualification test —
+  workflow volume, unstructured input, structured destination — that's industry-agnostic.
+
+## Building the site locally
+
+```bash
+pip install markdown
+python3 site/build.py     # writes _site/
+python3 -m http.server -d _site 8000
+```
+
+[`.github/workflows/pages.yml`](./.github/workflows/pages.yml) runs the same build on
+every push to `main`, fails if any internal link wasn't rewritten, and deploys to GitHub
+Pages. The phase rail on the landing page is parsed out of `FRAMEWORK.md` at build time,
+so it can't silently drift from the tracker.
+
+## Licence
+
+[GPL-3.0](./LICENSE).
