@@ -5,9 +5,11 @@ document, expanded in the open, and fact-checked against itself.
 
 ### **[→ Read it here](https://flyboy-byte.github.io/makecom/)**
 
-Nothing has been built or sold. It's a working evaluation of whether the idea holds up,
-kept honest about what's established, what's still a guess, and what turned out to be
-wrong.
+There are two things here. The **business evaluation** is unfinished and may not survive
+contact with a real customer — nothing has been built or sold. The **method** that
+produced it is finished, has caught its own errors, and has been extracted into a
+reusable form. If you don't care about automation agencies, read
+[The Method](https://flyboy-byte.github.io/makecom/method.html) and skip the rest.
 
 ## Pages
 
@@ -30,6 +32,8 @@ actually is, and what has to happen next
 [Vertical Playbook](https://flyboy-byte.github.io/makecom/vertical-playbook.html)
 
 **About the packet** ·
+[The Method](https://flyboy-byte.github.io/makecom/method.html) — how it was built, what
+worked, what was overhead ·
 [Documentation Guide](https://flyboy-byte.github.io/makecom/documentation-guide.html) ·
 [Research Handoff](https://flyboy-byte.github.io/makecom/research-handoff.html)
 

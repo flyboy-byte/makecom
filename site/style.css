@@ -668,6 +668,101 @@ main.wide {
   opacity: 0.85;
 }
 
+/* ---------------------------------------------------------------- pipeline */
+
+.pipe-wrap {
+  margin: 0 0 3.5rem;
+}
+.pipe {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.stage {
+  background: var(--raised);
+  padding: 0.75rem 0.85rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  position: relative;
+}
+.stage.plug {
+  background: var(--accent-soft);
+}
+.stage-num {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  color: var(--dim);
+  letter-spacing: 0.08em;
+}
+.stage.plug .stage-num {
+  color: var(--accent);
+}
+.stage-name {
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.stage-note {
+  font-size: 0.78rem;
+  color: var(--dim);
+  line-height: 1.4;
+}
+.pipe-key {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  flex-wrap: wrap;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--dim);
+  margin: 0.75rem 0 0;
+}
+.key {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.key::before {
+  content: "";
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  background: var(--raised);
+}
+.key.plug::before {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+.pipe-key a {
+  margin-left: auto;
+  text-decoration: none;
+}
+.pipe-key a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 860px) {
+  .pipe {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 460px) {
+  .pipe {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .pipe-key a {
+    margin-left: 0;
+  }
+}
+
 /* ------------------------------------------------------------- provenance */
 
 .prov {

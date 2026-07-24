@@ -15,9 +15,21 @@ strategic case, a reference architecture, a risk map and a research queue, then 
 against reality by external research engines. Some of it survived that check. Three
 things did not, and those are listed above rather than quietly edited out.
 
-It is documents — scaffolding, plans, architecture and evidence, written as Markdown and
-built into this site. Nothing has been sold, built, or shown to a customer. The value, if
-there is any, is in the reasoning being legible and the uncertainty being marked.
+**There are two outputs here, and only one of them is the business.**
+
+The **specimen** is the evaluation itself — is this a real business, and should anyone
+build it? That question is genuinely open. It sits at Phase 2, nothing has been sold or
+built, and no customer has ever heard it described. It may not survive first contact.
+
+The **method** is the way the evaluation was produced: capture the source verbatim, split
+documents by altitude rather than topic, gate progress on things that happen outside the
+files, queue whatever can't be verified instead of guessing it, and keep the corrections
+visible when research proves you wrong. Unlike the business, that part is finished — it
+has been through a full cycle including catching its own errors, and it has been
+extracted into a reusable form. [The Method](method.html) is the honest account of it,
+including which parts turned out to be overhead.
+
+If you only read one page and you don't care about automation agencies, read that one.
 
 ## How to read it
 
@@ -36,10 +48,12 @@ what's actually been done versus merely written, [Research Handoff](research-han
 shows how open questions were handed to external research tools, and
 [the evidence folder](research-index.html) holds the raw, unedited output of every pass.
 
-**If you're here for the method rather than the business** — [Documentation
-Guide](documentation-guide.html) explains the tier system, and [Vertical
-Scenarios](vertical-scenarios.html) is a deliberate attempt to break the model by
-applying it to three industries it wasn't designed around. One of them broke it.
+**If you're here for the method rather than the business** — [The Method](method.html)
+is the whole thing in five moves, with a retrospective on what worked and what was
+wasted effort. [Documentation Guide](documentation-guide.html) explains the tier system
+underneath it, and [Vertical Scenarios](vertical-scenarios.html) is a deliberate attempt
+to break the model by applying it to three industries it wasn't designed around. One of
+them broke it.
 
 ## The documents
 
@@ -77,6 +91,9 @@ applying it to three industries it wasn't designed around. One of them broke it.
 
 ### About the packet
 
+- **[The Method](method.html)** — the process as a first-class output, extracted into a
+  reusable form and audited honestly, including the parts that cost more than they
+  returned.
 - **[Framework](framework.html)** — the phase tracker. Gates advance by doing something
   outside these files: a conversation, a test, a signature. Never by writing more of them.
 - **[Documentation Guide](documentation-guide.html)** — which documents answer *should

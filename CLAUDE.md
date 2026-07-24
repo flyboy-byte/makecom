@@ -26,8 +26,14 @@ a test, a signed agreement), not by more writing.
   assumes the high-level case is already accepted.
 - **Mixed** (`docs/vertical-playbook.md`) bridges both — a repeatable process that spans
   a high-level screening judgment call and a low-level structured intake.
-- **Meta** (`FRAMEWORK.md`, `docs/documentation-guide.md`, `docs/research-handoff.md`)
-  describes the packet itself.
+- **Meta** (`FRAMEWORK.md`, `docs/method.md`, `docs/documentation-guide.md`,
+  `docs/research-handoff.md`) describes the packet itself.
+
+This project has **two outputs**: the business evaluation (the specimen — unvalidated,
+Phase 2) and the method that produced it (finished, extracted into the `idea-to-business`
+skill). `docs/method.md` is the account of the second one. Don't let edits collapse the
+two — the business case being speculative is not a flaw in the method, and the method
+being sound is not evidence the business works.
 
 The target market is defined by the source manual's 3-Trait Qualification Test (volume,
 unstructured input, structured destination — `make.com review.md` §1.3), not by a fixed
@@ -62,3 +68,9 @@ A generalized version of this packet's structure exists as a Claude Code skill,
 `idea-to-business` (`~/.claude/skills/idea-to-business/`), for applying the same
 framework to other ideas. It is intentionally a separate, standalone tool — do not use it
 to regenerate or restructure files in this directory; edit this project's docs directly.
+
+The site is built by `site/build.py` from these Markdown files and deployed by
+`.github/workflows/pages.yml` on every push to `main`. `site/overview.md` is the landing
+page's prose and exists only for the build — it is not part of the packet. The phase rail
+is parsed out of `FRAMEWORK.md` at build time, so that file's `### Phase N — Name ✅ status`
+heading format is load-bearing; changing it silently breaks the published status.

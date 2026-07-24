@@ -38,6 +38,7 @@ PAGES: list[tuple[str, str, str, str]] = [
     ("make.com review.md", "source-manual", "Source Manual", "The build"),
     ("docs/risks.md", "risks", "Risks", "Cross-cutting"),
     ("docs/vertical-playbook.md", "vertical-playbook", "Vertical Playbook", "Cross-cutting"),
+    ("docs/method.md", "method", "The Method", "About the packet"),
     ("docs/documentation-guide.md", "documentation-guide", "Documentation Guide", "About the packet"),
     ("docs/research-handoff.md", "research-handoff", "Research Handoff", "About the packet"),
 ]
@@ -255,6 +256,19 @@ LEDGER_META = {
     "corrected": ("Corrected", "Believed, then disproved.", "accent"),
 }
 
+# The eight-stage reference pipeline, condensed. The split between fixed and pluggable
+# is the whole claim of docs/architecture.md, so it's what the strip encodes.
+PIPELINE = [
+    ("Trigger", "plug", "however this business receives work"),
+    ("Verify", "fixed", "reject anything unsigned"),
+    ("Dedupe", "fixed", "same event twice costs nothing"),
+    ("Filter", "fixed", "bin the junk before it costs money"),
+    ("Extract", "plug", "messy input to structured data"),
+    ("Validate", "fixed", "reject malformed output"),
+    ("Approve", "fixed", "a person signs off"),
+    ("Write", "plug", "into whatever they already run"),
+]
+
 # How the packet actually got made — a loop, not a pipeline.
 PROVENANCE = [
     ("One source manual", "source-manual",
@@ -422,6 +436,33 @@ def ledger_html() -> str:
     )
 
 
+def pipeline_html() -> str:
+    cells = []
+    for idx, (name, kind, note) in enumerate(PIPELINE, start=1):
+        cells.append(
+            f'<li class="stage {kind}">'
+            f'<span class="stage-num">{idx}</span>'
+            f'<span class="stage-name">{html.escape(name)}</span>'
+            f'<span class="stage-note">{html.escape(note)}</span>'
+            "</li>"
+        )
+    return (
+        '<section class="pipe-wrap" aria-label="Reference pipeline">'
+        '<h2 class="block-title">What has actually been designed</h2>'
+        '<p class="block-lede">One pipeline shape, eight stages. Five are identical for '
+        "every client and are where the engineering argument lives; three have to be "
+        "rebuilt each time and are where knowing the customer's business becomes "
+        "unavoidable.</p>"
+        f'<ol class="pipe">{"".join(cells)}</ol>'
+        '<p class="pipe-key">'
+        '<span class="key fixed">fixed for every client</span>'
+        '<span class="key plug">rebuilt per client</span>'
+        '<a href="architecture.html">Full architecture →</a>'
+        "</p>"
+        "</section>"
+    )
+
+
 def provenance_html() -> str:
     steps = []
     for idx, (title, slug, detail) in enumerate(PROVENANCE, start=1):
@@ -521,6 +562,7 @@ def build() -> None:
 </header>
 {phase_rail_html()}
 {ledger_html()}
+{pipeline_html()}
 {provenance_html()}
 <article class="prose">{readme_body}</article>"""
     (OUT / "index.html").write_text(

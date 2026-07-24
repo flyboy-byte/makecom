@@ -214,13 +214,19 @@ missed-call SMS workflow pattern also needs an actual lawyer before it's ever so
 client, regardless of vertical — that's the other real-world action item research alone
 can't close.
 
-## On the "reusable framework" idea
+## The second output: the method — ✅ built
 
-Separately, you flagged that the *process* used to get here — a handful of prompts
-turning a raw source doc into this tiered, gated packet — is worth generalizing into
-something you could point at any future spark of inspiration (the "college, get inspired"
-case). That's a good idea and a natural fit for a Claude Code Skill, but it's explicitly
-out of scope for this directory, which is about *this* idea specifically. If you want to
-pursue that later, say so and it can be built as a separate, standalone thing — probably
-by generalizing this file and the `docs/` structure into a template once this project has
-been through a full cycle and you know what actually mattered vs. what was overhead.
+The *process* used to get here — turning a raw source doc into a tiered, gated packet —
+was generalised into a reusable Claude Code skill at `~/.claude/skills/idea-to-business/`,
+so it can be pointed at any future spark without re-deriving the structure. It was tested
+by running it against this project from scratch in a separate directory; it mostly
+reproduced the packet, and the test surfaced three defects in the skill, two of which were
+fixed.
+
+This matters for how the project is read. The business evaluation is the **specimen** and
+is genuinely unfinished — Phase 2, unvalidated, possibly never viable. The method is the
+**second output**, and unlike the business it has been through a complete cycle including
+self-correction. [`docs/method.md`](./docs/method.md) is the honest account of it: the
+five moves, what actually worked, and what was overhead — including the observation that
+1,800 lines of Markdown now exist in service of an idea no customer has ever heard
+described.

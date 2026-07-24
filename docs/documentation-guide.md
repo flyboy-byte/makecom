@@ -48,30 +48,51 @@ config flags, response-time numbers.
 | --- | --- |
 | [`vertical-playbook.md`](./vertical-playbook.md) | Screening a new vertical (high-level judgment call) and onboarding a new client (low-level structured intake) in one repeatable process |
 
+### Meta — about the packet rather than the business
+
+| Doc | What it's for |
+| --- | --- |
+| [`../FRAMEWORK.md`](../FRAMEWORK.md) | The phase tracker — what's genuinely done versus merely written |
+| [`method.md`](./method.md) | How the packet was built, what worked, what was overhead, and the reusable form the process was extracted into |
+| [`research-handoff.md`](./research-handoff.md) | How unverifiable claims get handed to an external research engine |
+| this file | The tier system itself |
+
 ## How the tiers relate
 
-The low-level doc (`make.com review.md`) came first and is the most concrete artifact in
-the packet — it's a real operating manual, not a sketch. The high-level docs were written
-*around* it, extracting the strategic questions it implies but doesn't answer (will anyone
-pay for this, what's the actual risk exposure, what's still undecided). Read top-down if
-you're new to the idea (`business-idea.md` → `feasibility.md` → `risks.md` →
-`make.com review.md` → `infrastructure.md`); read bottom-up if you already believe in the
-idea and want to know what building it involves.
+The low-level source manual (`make.com review.md`) came first and is the most concrete
+artifact in the packet — a real operating manual, not a sketch. The high-level docs were
+written *around* it, extracting the strategic questions it implies but doesn't answer
+(will anyone pay for this, what's the actual risk exposure, what's still undecided). The
+remaining docs came later, when the packet's own claims needed backing:
+[`architecture.md`](./architecture.md) after the target market was redefined and the
+technical model had to be shown to actually generalise, and
+[`vertical-playbook.md`](./vertical-playbook.md) plus
+[`vertical-scenarios.md`](./vertical-scenarios.md) to make that claim testable rather
+than asserted.
 
-## Who this whole packet is actually for, concretely
+Two reading orders work. Top-down if the idea is new to you: `business-idea.md` →
+`feasibility.md` → `risks.md` → `architecture.md`. Bottom-up if you already accept the
+premise and want to know what building it involves: `make.com review.md` →
+`architecture.md` → `infrastructure.md`.
 
-Right now: a single audience — you, the founder, at two different moments. The high-level
-docs are for the moment you're deciding whether to keep going or explaining the idea to
-someone else for the first time. The low-level docs are for the moment you sit down to
-actually configure a Make.com scenario. Nobody else has read any of this yet — which means
-none of it has been pressure-tested against an outside reader. That's the gap
-[`research-handoff.md`](./research-handoff.md) and real client conversations
-(`feasibility.md`) are meant to close.
+## Who this packet is actually for, concretely
 
-If this packet later grows a second audience — a hired contractor, an investor, a
-co-founder — the tiering above is what determines what they get handed: decision-makers
-get the high-level set only; implementers get the low-level set plus enough of
-`business-idea.md` for context.
+**This changed, and the change matters.** For most of its life this packet had exactly
+one reader — the founder, at two different moments: deciding whether to keep going, and
+sitting down to actually configure a scenario. The tiering exists because those two
+moments want completely different documents.
+
+It is now a public repository with a published site, so the audience is open-ended: anyone
+reading it as a worked example of the method, anyone evaluating the idea itself, anyone
+who found it by accident. That doesn't change the tiering — if anything it makes it more
+load-bearing, since a stranger has no context to compensate with — but it does mean the
+"nobody has read this yet" caveat that used to sit here is no longer true, and claims in
+these docs should be written as though a skeptical outsider will check them. Several
+already have been checked, and [`method.md`](./method.md) records where that went badly.
+
+What has *not* changed: none of it has been pressure-tested against a prospective
+**customer**. That gap is what [`../FRAMEWORK.md`](../FRAMEWORK.md)'s Phase 2 exists to
+close, and no amount of readers substitutes for it.
 
 ## Adding a new doc
 
