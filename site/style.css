@@ -449,6 +449,51 @@ main.wide {
   color: var(--dim);
 }
 
+/* --------------------------------------------------------- evidence index */
+
+.evidence {
+  margin-top: 2.5rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--rule);
+}
+.evidence h2 {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
+}
+.evidence > p {
+  color: var(--dim);
+  margin: 0 0 1.25rem;
+  max-width: 62ch;
+}
+.ev-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--rule);
+}
+.ev-list li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--rule);
+  flex-wrap: wrap;
+}
+.ev-list a {
+  font-weight: 600;
+  text-decoration: none;
+}
+.ev-list a:hover {
+  text-decoration: underline;
+}
+.ev-meta {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--dim);
+  white-space: nowrap;
+}
+
 /* ------------------------------------------------------------------- hero */
 
 .hero {

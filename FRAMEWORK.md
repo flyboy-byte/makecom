@@ -130,6 +130,17 @@ pattern before it's sold to anyone.
       first is now genuinely open, not pre-answered. Should be decided by where real
       access/domain knowledge exists, not by which industry sounds biggest — see
       `docs/entrepreneur-notes.md` §"Which vertical to actually validate in first."
+- [ ] **New open decision, 2026-07-23 — the platform, and therefore the offer.**
+      `docs/what-to-sell.md` works through six product shapes and finds the platform
+      choice decides most of them: on Make.com the client rents forever and "build and
+      own" isn't quite honest, while on self-hosted n8n ownership is real and a retainer
+      has something concrete to charge for (running the thing). The competitor found in
+      research who sells one-time builds with no retainer runs self-hosted n8n — their
+      model follows from their platform. **Nobody has built the same pipeline on two
+      platforms to compare**, so this is reasoning, not measurement; settling it belongs
+      in Phase 3. The provisional default is: sell the diagnostic first, then a
+      fixed-price build on a platform the client can genuinely own, with hosted
+      operations offered as an alternative rather than a condition.
 
 **Gate to Phase 3:** at least one real conversation confirming the pain is real *and*
 worth paying for, or a clear signal it's not (in which case: revisit which vertical to
@@ -144,6 +155,9 @@ Stand up the first working pipeline, per `docs/infrastructure.md`.
       Make AI connector
 - [ ] Pick the cheapest worked pattern to build first (missed-call SMS resuscitation is
       the current leading candidate — see `docs/entrepreneur-notes.md`)
+- [ ] **Build one pipeline twice — once on Make.com, once on self-hosted n8n** — to
+      settle the platform question with measurement instead of reasoning
+      (`docs/what-to-sell.md`). Cheap to do, and it decides the shape of the offer.
 - [ ] Build one working demo end-to-end, even without a paying client yet
 - [ ] Run the 50-valid / 10-malformed test suite against it (`make.com review.md` §3.2)
 

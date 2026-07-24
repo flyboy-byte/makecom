@@ -17,7 +17,7 @@ a test, a signed agreement), not by more writing.
 
 `docs/documentation-guide.md` explains the doc tiering in full; the short version:
 
-- **High-level** (`docs/business-idea.md`, `docs/feasibility.md`,
+- **High-level** (`docs/business-idea.md`, `docs/what-to-sell.md`, `docs/feasibility.md`,
   `docs/entrepreneur-notes.md`, `docs/vertical-scenarios.md`, and the legal/market
   sections of `docs/risks.md`) answers "should this exist" — written for the
   decision-maker, assumes no technical background.
@@ -45,6 +45,13 @@ reintroduce vertical-specific language into vertical-agnostic docs (`architectur
 `make.com review.md` (with matching PDF) is the original source manual this packet was
 built from — treat it as the technical spine; the `docs/` files are the strategic layer
 built on top of it, and cite it by section (`§2.2`, etc.) rather than restating it.
+
+**Make.com is an inherited assumption, not a settled decision.** The eight-stage
+architecture in `docs/architecture.md` is platform-agnostic, and `docs/what-to-sell.md`
+works through how the platform choice (Make.com vs. self-hosted n8n vs. Zapier vs. code)
+determines what can honestly be sold — notably whether "build and own" is truthful and
+whether a retainer has anything real to charge for. Don't write as though Make.com is
+required.
 
 ## Working conventions in this repo
 

@@ -9,6 +9,16 @@ File naming: `YYYY-MM-DD-<short-topic-slug>-<engine>.md`. Each file should prese
 exact prompt used plus the raw response, unedited — corrections and synthesis happen in
 the consuming doc (`docs/feasibility.md`, `docs/risks.md`, etc.), not here.
 
-Five sessions run 2026-07-23 (see `docs/research-handoff.md` for status and the queue of
-what's left). All were run via Claude Code's `WebSearch` tool as a first pass, not a full
-browser-based deep-research session — each file notes this caveat explicitly.
+Seven files, all 2026-07-23, in three rounds:
+
+1. **Five fast passes** via Claude Code's `WebSearch` tool — quick, shallow, and useful
+   mainly for revealing which questions were load-bearing. One of them introduced a
+   factual error about API data retention.
+2. **A full ChatGPT deep-research pass** against the whole question set, which caught
+   that error.
+3. **A full Claude/Opus deep-research pass** against the identical prompt, as a second
+   opinion. It found an entirely different set of competitors while reaching the same
+   conclusion, and independently confirmed the same correction.
+
+Where the fast passes and the deep passes disagree, the deep passes win — see
+`docs/method.md` for what that episode says about the process.

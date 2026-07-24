@@ -55,60 +55,17 @@ underneath it, and [Vertical Scenarios](vertical-scenarios.html) is a deliberate
 to break the model by applying it to three industries it wasn't designed around. One of
 them broke it.
 
-## The documents
+## Two open questions
 
-### The case
+**What the product actually is.** The source manual assumed a custom build plus a
+mandatory monthly retainer, and research showed the mandatory part fights competitors who
+sell one-time builds and market against lock-in. [What To Sell](what-to-sell.html) works
+through six alternative shapes — and finds that the platform choice decides the answer,
+because on a rented platform "you own it" isn't quite true, while on self-hosted
+infrastructure a retainer has something real to charge for.
 
-- **[The Idea](business-idea.html)** — the pitch, the target defined by a qualification
-  test rather than an industry, and a blunt section on what's genuinely novel here versus
-  what's just competent execution of a known playbook.
-- **[Feasibility](feasibility.html)** — demand, competitors, what one build costs, what
-  the market already pays, and what still needs validating before any of it matters.
-- **[Vertical Scenarios](vertical-scenarios.html)** — three hypothetical industries run
-  through the architecture as a stress test. Explicitly unresearched; the point was to
-  find where the abstraction strains, and it did.
-- **[Working Notes](entrepreneur-notes.html)** — the live scratchpad. Positioning,
-  pricing rationale, and the decisions still genuinely open.
-
-### The build
-
-- **[Architecture](architecture.html)** — eight stages, each marked fixed or pluggable.
-  Mapping the source manual's own worked examples onto it exposed stages those examples
-  quietly skip.
-- **[Infrastructure](infrastructure.html)** — accounts, data stores, secrets, environment
-  isolation, and the gaps the source manual never addressed.
-- **[Source Manual](source-manual.html)** — the original document. Client qualification,
-  hardened scenario design, deployment discipline, data governance, contract clauses, SLA
-  tiers, and three worked pipelines.
-
-### Cross-cutting
-
-- **[Risks](risks.html)** — legal, technical, market and operational. Includes a
-  genuinely unsettled TCPA problem with an active circuit split, which is the single
-  thing most likely to hurt someone here.
-- **[Vertical Playbook](vertical-playbook.html)** — how to screen a new industry before
-  spending research time on it, then how to qualify a specific client inside it.
-
-### About the packet
-
-- **[The Method](method.html)** — the process as a first-class output, extracted into a
-  reusable form and audited honestly, including the parts that cost more than they
-  returned.
-- **[Framework](framework.html)** — the phase tracker. Gates advance by doing something
-  outside these files: a conversation, a test, a signature. Never by writing more of them.
-- **[Documentation Guide](documentation-guide.html)** — which documents answer *should
-  we* and which answer *how would we*, and why conflating the two ruins both.
-- **[Research Handoff](research-handoff.html)** — the queue of claims nobody could vouch
-  for, the exact prompt used to hand them to an external research engine, and what came
-  back.
-
-### Evidence
-
-[The research folder](research-index.html) holds every pass verbatim, with citations and
-dates — a fast web search first, then two independent deep-research runs. The two deep
-runs found entirely different competitors from each other while reaching the same
-conclusion, which is worth more than either would have been alone. They also both caught
-a factual error the fast pass introduced.
+**Whether anyone wants it.** Nobody has asked. That's [the whole of Phase
+2](framework.html), and it's the one thing none of this writing can settle.
 
 ## Running it locally
 

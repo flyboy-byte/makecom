@@ -13,33 +13,31 @@ reusable form. If you don't care about automation agencies, read
 
 ## Pages
 
-**Start** · [Framework](https://flyboy-byte.github.io/makecom/framework.html) — where this
-actually is, and what has to happen next
+**Start here** ·
+[The Idea](https://flyboy-byte.github.io/makecom/business-idea.html) ·
+[What To Sell](https://flyboy-byte.github.io/makecom/what-to-sell.html) ·
+[Where It Stands](https://flyboy-byte.github.io/makecom/framework.html)
 
 **The case** ·
-[The Idea](https://flyboy-byte.github.io/makecom/business-idea.html) ·
 [Feasibility](https://flyboy-byte.github.io/makecom/feasibility.html) ·
-[Vertical Scenarios](https://flyboy-byte.github.io/makecom/vertical-scenarios.html) ·
+[Risks](https://flyboy-byte.github.io/makecom/risks.html) ·
 [Working Notes](https://flyboy-byte.github.io/makecom/entrepreneur-notes.html)
 
 **The build** ·
 [Architecture](https://flyboy-byte.github.io/makecom/architecture.html) ·
-[Infrastructure](https://flyboy-byte.github.io/makecom/infrastructure.html) ·
-[Source Manual](https://flyboy-byte.github.io/makecom/source-manual.html)
+[Infrastructure](https://flyboy-byte.github.io/makecom/infrastructure.html)
 
-**Cross-cutting** ·
-[Risks](https://flyboy-byte.github.io/makecom/risks.html) ·
-[Vertical Playbook](https://flyboy-byte.github.io/makecom/vertical-playbook.html)
-
-**About the packet** ·
-[The Method](https://flyboy-byte.github.io/makecom/method.html) — how it was built, what
-worked, what was overhead ·
+**Reference** ·
+[Source Manual](https://flyboy-byte.github.io/makecom/source-manual.html) ·
+[Vertical Playbook](https://flyboy-byte.github.io/makecom/vertical-playbook.html) ·
+[Vertical Scenarios](https://flyboy-byte.github.io/makecom/vertical-scenarios.html) ·
+[The Method](https://flyboy-byte.github.io/makecom/method.html) ·
 [Documentation Guide](https://flyboy-byte.github.io/makecom/documentation-guide.html) ·
 [Research Handoff](https://flyboy-byte.github.io/makecom/research-handoff.html)
 
 **Evidence** ·
-[Research folder](https://flyboy-byte.github.io/makecom/research-index.html) — raw output
-from every research pass, with citations
+[Research & sources](https://flyboy-byte.github.io/makecom/research-index.html) — every
+pass in full, with citations
 
 ## Repo
 

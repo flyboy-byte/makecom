@@ -28,36 +28,35 @@ SITE_TAGLINE = "A phase-gated evaluation of a Make.com automation practice."
 
 # (source path, slug, nav title, group). Order here is nav order.
 PAGES: list[tuple[str, str, str, str]] = [
-    ("FRAMEWORK.md", "framework", "Framework", "Start here"),
-    ("docs/business-idea.md", "business-idea", "The Idea", "The case"),
+    ("docs/business-idea.md", "business-idea", "The Idea", "Start here"),
+    ("docs/what-to-sell.md", "what-to-sell", "What To Sell", "Start here"),
+    ("FRAMEWORK.md", "framework", "Where It Stands", "Start here"),
     ("docs/feasibility.md", "feasibility", "Feasibility", "The case"),
-    ("docs/vertical-scenarios.md", "vertical-scenarios", "Vertical Scenarios", "The case"),
+    ("docs/risks.md", "risks", "Risks", "The case"),
     ("docs/entrepreneur-notes.md", "entrepreneur-notes", "Working Notes", "The case"),
     ("docs/architecture.md", "architecture", "Architecture", "The build"),
     ("docs/infrastructure.md", "infrastructure", "Infrastructure", "The build"),
-    ("make.com review.md", "source-manual", "Source Manual", "The build"),
-    ("docs/risks.md", "risks", "Risks", "Cross-cutting"),
-    ("docs/vertical-playbook.md", "vertical-playbook", "Vertical Playbook", "Cross-cutting"),
-    ("docs/method.md", "method", "The Method", "About the packet"),
-    ("docs/documentation-guide.md", "documentation-guide", "Documentation Guide", "About the packet"),
-    ("docs/research-handoff.md", "research-handoff", "Research Handoff", "About the packet"),
+    ("make.com review.md", "source-manual", "Source Manual", "Reference"),
+    ("docs/vertical-playbook.md", "vertical-playbook", "Vertical Playbook", "Reference"),
+    ("docs/vertical-scenarios.md", "vertical-scenarios", "Vertical Scenarios", "Reference"),
+    ("docs/method.md", "method", "The Method", "Reference"),
+    ("docs/documentation-guide.md", "documentation-guide", "Documentation Guide", "Reference"),
+    ("docs/research-handoff.md", "research-handoff", "Research Handoff", "Reference"),
 ]
 
 GROUP_ORDER = [
     "Start here",
     "The case",
     "The build",
-    "Cross-cutting",
-    "About the packet",
+    "Reference",
     "Evidence",
 ]
 
 GROUP_NOTE = {
-    "The case": "high-level",
-    "The build": "low-level",
-    "Cross-cutting": "mixed",
-    "About the packet": "meta",
-    "Evidence": "raw research",
+    "The case": "is it worth doing",
+    "The build": "how it works",
+    "Reference": "depth",
+    "Evidence": "sources",
 }
 
 MD_EXTENSIONS = ["tables", "fenced_code", "sane_lists", "attr_list", "toc"]
@@ -88,11 +87,12 @@ def _titlecase(text: str) -> str:
 
 
 def research_pages() -> list[tuple[str, str, str, str]]:
-    """Research files, newest first, as nav entries."""
+    """Research files, newest first. Only the index appears in nav — the rest are
+    reachable from it, so seven near-identical filenames don't dominate the sidebar."""
     out = []
     for path in sorted((ROOT / "research").glob("*.md"), reverse=True):
         if path.name.lower() == "readme.md":
-            title = "About this folder"
+            title = "Research & sources"
             slug = "research-index"
         else:
             slug = "research-" + path.stem.lower()
@@ -338,6 +338,9 @@ def render_tasks(html_text: str) -> str:
 def nav_html(active_slug: str) -> str:
     groups: dict[str, list[tuple[str, str]]] = {}
     for _src, slug, title, group in ALL_PAGES:
+        # Individual research files are reached from the index, not the sidebar.
+        if group == "Evidence" and slug != "research-index":
+            continue
         groups.setdefault(group, []).append((slug, title))
 
     parts = ['<a class="nav-home" href="index.html">Overview</a>']
@@ -433,6 +436,28 @@ def ledger_html() -> str:
         "a guess, and what turned out to be wrong.</p>"
         f'<div class="ledger">{"".join(cols)}</div>'
         "</section>"
+    )
+
+
+def research_listing_html() -> str:
+    """Index of the raw research files, since they aren't in the sidebar."""
+    rows = []
+    for src, slug, title, group in ALL_PAGES:
+        if group != "Evidence" or slug == "research-index":
+            continue
+        m = re.match(r"research/(\d{4}-\d{2}-\d{2})-", src)
+        date = m.group(1) if m else ""
+        name, _, engine = title.partition(" · ")
+        rows.append(
+            f'<li><a href="{slug}.html">{html.escape(name)}</a>'
+            f'<span class="ev-meta">{html.escape(engine or "—")} · {date}</span></li>'
+        )
+    return (
+        '<section class="evidence"><h2>Every pass, in full</h2>'
+        "<p>Raw output, saved before anything was merged into the packet. "
+        "Two of these disagree with a third — see "
+        '<a href="method.html">The Method</a> for which and why.</p>'
+        f'<ul class="ev-list">{"".join(rows)}</ul></section>'
     )
 
 
@@ -534,6 +559,8 @@ def build() -> None:
 
     for src_rel, slug, nav_title, _group in ALL_PAGES:
         heading, fields, body = convert(src_rel)
+        if slug == "research-index":
+            body += research_listing_html()
         source_href = (
             "https://github.com/flyboy-byte/makecom/blob/main/"
             + urllib.parse.quote(src_rel)
