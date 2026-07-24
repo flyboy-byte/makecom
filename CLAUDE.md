@@ -76,8 +76,13 @@ A generalized version of this packet's structure exists as a Claude Code skill,
 framework to other ideas. It is intentionally a separate, standalone tool — do not use it
 to regenerate or restructure files in this directory; edit this project's docs directly.
 
-The site is built by `site/build.py` from these Markdown files and deployed by
-`.github/workflows/pages.yml` on every push to `main`. `site/overview.md` is the landing
-page's prose and exists only for the build — it is not part of the packet. The phase rail
-is parsed out of `FRAMEWORK.md` at build time, so that file's `### Phase N — Name ✅ status`
-heading format is load-bearing; changing it silently breaks the published status.
+The site is **one page**, built by `site/build.py` from `site/page.md` and deployed by
+`.github/workflows/pages.yml` on every push to `main`. It is a summary of the idea, not a
+rendering of the packet — the docs are read as Markdown on GitHub. Don't regenerate a
+page per document; that sprawl was removed deliberately.
+
+Two things in the build are load-bearing. The phase rail is parsed out of `FRAMEWORK.md`,
+so that file's `### Phase N — Name ✅ status` heading format cannot change without
+silently breaking the published status. And `site/page.md`'s `##` headings are looked up
+by name to place the visual blocks — renaming one fails the build loudly, which is
+intended.

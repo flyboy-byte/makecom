@@ -11,33 +11,27 @@ produced it is finished, has caught its own errors, and has been extracted into 
 reusable form. If you don't care about automation agencies, read
 [The Method](https://flyboy-byte.github.io/makecom/method.html) and skip the rest.
 
-## Pages
+## The documents
 
-**Start here** ·
-[The Idea](https://flyboy-byte.github.io/makecom/business-idea.html) ·
-[What To Sell](https://flyboy-byte.github.io/makecom/what-to-sell.html) ·
-[Where It Stands](https://flyboy-byte.github.io/makecom/framework.html)
+The site is one page — the idea, the offer, and an honest read on whether it holds up.
+Everything below is the working detail, read here on GitHub.
 
-**The case** ·
-[Feasibility](https://flyboy-byte.github.io/makecom/feasibility.html) ·
-[Risks](https://flyboy-byte.github.io/makecom/risks.html) ·
-[Working Notes](https://flyboy-byte.github.io/makecom/entrepreneur-notes.html)
-
-**The build** ·
-[Architecture](https://flyboy-byte.github.io/makecom/architecture.html) ·
-[Infrastructure](https://flyboy-byte.github.io/makecom/infrastructure.html)
-
-**Reference** ·
-[Source Manual](https://flyboy-byte.github.io/makecom/source-manual.html) ·
-[Vertical Playbook](https://flyboy-byte.github.io/makecom/vertical-playbook.html) ·
-[Vertical Scenarios](https://flyboy-byte.github.io/makecom/vertical-scenarios.html) ·
-[The Method](https://flyboy-byte.github.io/makecom/method.html) ·
-[Documentation Guide](https://flyboy-byte.github.io/makecom/documentation-guide.html) ·
-[Research Handoff](https://flyboy-byte.github.io/makecom/research-handoff.html)
-
-**Evidence** ·
-[Research & sources](https://flyboy-byte.github.io/makecom/research-index.html) — every
-pass in full, with citations
+| | |
+|---|---|
+| [The idea](./docs/business-idea.md) | Who it's for, and what's genuinely novel versus merely competent |
+| [What to sell](./docs/what-to-sell.md) | Six product shapes, and why the platform choice decides most of them |
+| [Feasibility](./docs/feasibility.md) | Competitors, pricing, build costs, what the market already pays |
+| [Risks](./docs/risks.md) | Legal, technical, market, operational — including one unsettled legal question |
+| [Architecture](./docs/architecture.md) | The eight stages, and which are the same for every client |
+| [Infrastructure](./docs/infrastructure.md) | Accounts, storage, secrets, what it takes to stand up |
+| [Where it stands](./FRAMEWORK.md) | Phase tracker. Gates advance on events outside these files, never on more writing |
+| [The method](./docs/method.md) | How it was built, what worked, what was overhead |
+| [Vertical playbook](./docs/vertical-playbook.md) | Screening a new industry, then a client inside it |
+| [Vertical scenarios](./docs/vertical-scenarios.md) | Three industries the model wasn't designed for. One broke it |
+| [Documentation guide](./docs/documentation-guide.md) | Which docs answer *should we* and which answer *how would we* |
+| [Research handoff](./docs/research-handoff.md) | How open questions were handed to external research engines |
+| [Research](./research/) | Every pass in full, unedited, with sources |
+| [Source manual](./make.com%20review.md) | The original document all of this came from |
 
 ## Repo
 
