@@ -25,6 +25,7 @@ Everything below is the working detail, read here on GitHub.
 | [Architecture](./docs/architecture.md) | The eight stages, and which are the same for every client |
 | [Infrastructure](./docs/infrastructure.md) | Accounts, storage, secrets, what it takes to stand up |
 | [Where it stands](./FRAMEWORK.md) | Phase tracker. Gates advance on events outside these files, never on more writing |
+| [Expansion plan](./docs/expansion.md) | Who this gets shown to first, and why — planned, not yet sent |
 | [The method](./docs/method.md) | How it was built, what worked, what was overhead |
 | [Vertical playbook](./docs/vertical-playbook.md) | Screening a new industry, then a client inside it |
 | [Vertical scenarios](./docs/vertical-scenarios.md) | Three industries the model wasn't designed for. One broke it |

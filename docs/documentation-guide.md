@@ -24,6 +24,7 @@ questions plainly, doesn't require Make.com/webhook/API literacy to follow.
 | [`business-idea.md`](./business-idea.md) | The pitch — what it is, who it's for, why now |
 | [`feasibility.md`](./feasibility.md) | Is this worth pursuing — demand, cost, validation plan |
 | [`entrepreneur-notes.md`](./entrepreneur-notes.md) | Live scratchpad of open decisions |
+| [`expansion.md`](./expansion.md) | Who this gets shown to first, and the plan for it — not yet executed |
 | [`vertical-scenarios.md`](./vertical-scenarios.md) | Stress-tests whether the qualification-test framing holds outside HVAC/auto-repair |
 | [`risks.md`](./risks.md) *(legal/market sections)* | What could kill this and why |
 

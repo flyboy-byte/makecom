@@ -130,6 +130,13 @@ pattern before it's sold to anyone.
       first is now genuinely open, not pre-answered. Should be decided by where real
       access/domain knowledge exists, not by which industry sounds biggest — see
       `docs/entrepreneur-notes.md` §"Which vertical to actually validate in first."
+- [ ] **Expansion plan drafted, 2026-07-23 — not yet executed.** Five specific people
+      identified as the first outside readers (two operators in adjacent/comparable
+      retainer businesses, a technical peer, an experienced business owner, and a
+      low-context reader as a comprehension test), with per-person framing and questions
+      worked out before sending anything — see [`docs/expansion.md`](./docs/expansion.md).
+      The two operator conversations are the actual Phase 2 primary research this
+      tracker has been blocked on; nothing has been sent yet.
 - [ ] **New open decision, 2026-07-23 — the platform, and therefore the offer.**
       `docs/what-to-sell.md` works through six product shapes and finds the platform
       choice decides most of them: on Make.com the client rents forever and "build and
@@ -187,46 +194,26 @@ Stand up the first working pipeline, per `docs/infrastructure.md`.
 
 ## Current status (update this line as phases advance)
 
-**We are in Phase 2, in progress — the research-handoff queue is done, twice over.**
-Phase 1 is complete. All 6 research questions have been resolved (or correctly
-confirmed unresolvable by web research) via two independent deep-research passes on
-2026-07-23 (ChatGPT and Claude/Opus) that found different named competitors from each
-other yet reached the same conclusions — real corroboration, not just a repeated search.
-Both independently corrected an error from an earlier quick-search first pass
-(Anthropic's data retention figure — see `docs/risks.md`). The confirmed headline
-finding: at least 17 real competitors (combined across both passes) serve this exact
-niche, and most don't require a mandatory retainer — this is now a well-corroborated
-market fact, not a hypothesis, and directly threatens this packet's pricing model. Both
-passes converge on the same fix: offer a one-time build-and-own path at a premium
-alongside an incentivized retainer, rather than presenting the retainer as mandatory
-(see `docs/feasibility.md`, `docs/entrepreneur-notes.md`).
+**Phase 1 is complete. Phase 2's desk research is done; its primary research is not
+started.** Everything answerable from a desk has been answered: two independent
+deep-research passes (2026-07-23) resolved the research queue, found 17 competitors
+between them, corrected an error from an earlier quick pass, and confirmed the retainer
+can't be sold as mandatory. The target market was reframed from a fixed vertical
+(HVAC/auto-repair) to the source manual's own qualification test, and the technical
+architecture was generalized and stress-tested to match. `docs/what-to-sell.md` then
+worked out what the actual offer should be, and found the platform choice (Make.com vs.
+self-hosted) decides most of it — unresolved, and now a Phase 3 task.
 
-**Also reworked 2026-07-23:** the target market is no longer defined by HVAC/auto-repair
-specifically — it's defined by the source manual's 3-Trait Qualification Test (volume,
-unstructured input, structured destination), which is industry-agnostic. HVAC/auto-repair
-are now this project's researched case study, not the definition of the target — see
-`docs/business-idea.md`. This reopens a real decision: which vertical to actually
-validate in first, which should be driven by where real access/domain knowledge exists,
-not by defaulting to whatever's already been researched.
+**The honest read, stated plainly on the site:** the evidence gathered so far leans
+against this. Underpriced by real competitors, a differentiator the buyer can't perceive,
+a capability being commoditized by the platforms it's built on, and genuine legal risk in
+one flagship workflow. None of that is fatal, but no more research changes it — see the
+site's "honest read" section.
 
-**Same day, follow-on:** that reframe was abstract until it had a technical and process
-backbone to match — added `docs/architecture.md` (the eight-stage reference architecture,
-fixed vs. pluggable per client), `docs/vertical-playbook.md` (a two-layer screening and
-onboarding process), and `docs/vertical-scenarios.md` (three hypothetical verticals
-stress-testing whether the architecture actually generalizes). The stress test held up
-reasonably well but wasn't a rubber stamp — it surfaced one honest gap (a possible
-missing ninth stage for compliance-heavy verticals like legal intake). None of this
-changes the actual next action below; it makes the "any qualifying business" claim
-concrete enough to act on once a real vertical is chosen.
-
-Nothing left in Phase 2 can be resolved from inside this directory. The single
-highest-leverage next action: pick a first vertical based on real access, then talk to
-real business owners in it — testing whether the pain is real, whether they'll pay an
-ongoing retainer at all given named competitors (in the HVAC/auto-repair case study)
-don't require one, and whether the two-path pricing recommendation lands. The
-missed-call SMS workflow pattern also needs an actual lawyer before it's ever sold to a
-client, regardless of vertical — that's the other real-world action item research alone
-can't close.
+**Nothing left in Phase 2 can be resolved from inside this directory.** An expansion plan
+was drafted 2026-07-23 (`docs/expansion.md`) for showing this to five specific people
+first, two of whom run comparable or adjacent retainer businesses — that's the actual
+primary research this phase has been blocked on. Not yet sent.
 
 ## The second output: the method — ✅ built
 

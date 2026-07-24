@@ -66,19 +66,18 @@ Update this file as answers come in from real client conversations.
 
 ## Go-to-market — open questions
 
-- **Which vertical to actually validate in first — reopened 2026-07-23.** The packet no
-  longer defaults to HVAC/auto-repair by definition (see `docs/business-idea.md`), which
-  means this question is now genuinely open rather than pre-answered by the source
-  manual. The right way to pick: not "which industry sounds biggest," but **where do you
-  (or someone you can actually reach) have real domain knowledge or a real relationship**
-  — because the qualification test only screens for workflow *shape*; it doesn't supply
-  the operational detail needed to actually design a pipeline. That detail has to come
-  from somewhere real. Candidates worth weighing: HVAC/auto-repair (already researched
-  in depth here, but no personal access confirmed either way), or any other business
-  clearing the 3-Trait Test where you have an actual in.
+- **Which vertical to actually validate in first — reopened 2026-07-23, partially
+  answered 2026-07-23.** The packet no longer defaults to HVAC/auto-repair by definition
+  (see `docs/business-idea.md`), so this question is genuinely open rather than
+  pre-answered by the source manual — **where do you have real domain knowledge or a
+  real relationship**, not which industry sounds biggest, since the qualification test
+  only screens for workflow *shape* and supplies none of the operational detail an actual
+  pipeline needs. `docs/expansion.md` starts answering this concretely: two of the five
+  planned first conversations are with people already running comparable or adjacent
+  retainer businesses, which is a real in, not a hypothetical one.
 - Who is the first prospect, specifically, within whichever vertical gets picked? Cold
-  outreach vs. warm network vs. a specific local geography — not addressed in the source
-  material at all.
+  outreach vs. warm network vs. a specific local geography — see `docs/expansion.md` for
+  the plan covering the first five conversations, at least.
 - Is the "mandatory video capture of 5 recordings" intake step (`review.md` §1.2) too high
   friction for an unproven agency with no track record? It's a reasonable qualification
   filter once there's reputation/referrals to draw on, but may be an early barrier to the

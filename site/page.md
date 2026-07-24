@@ -63,9 +63,10 @@ damages and class-action filings up sharply.
 The economics describe a job rather than a business: bespoke builds, sold one at a time,
 to a segment that is slow to buy and hard to reach.
 
-**What would change the answer** is not more analysis. It's one conversation with one
-business owner about what actually happens when a call comes in during a job. That has
-never happened. Until it does, everything here — including this paragraph — is inference.
+**What would change the answer** is not more analysis. It's a real conversation with
+someone who actually runs a business like this — not a prospective customer, an operator.
+Two are planned. Until they happen, everything here — including this paragraph — is
+inference.
 
 The part most likely to survive contact with reality is the diagnostic sold on its own.
 It has no delivery risk, needs no track record, and is useful to the buyer whether or not
